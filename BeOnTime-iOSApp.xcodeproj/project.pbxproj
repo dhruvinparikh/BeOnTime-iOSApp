@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913B5A29207E9837006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A26207E9837006DCBFD /* beontime_logo_32x32.png */; };
+		913B5A2A207E9837006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A27207E9837006DCBFD /* beontime_logo_639x165.png */; };
+		913B5A2B207E9837006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A28207E9837006DCBFD /* beontime_logo_225x225.png */; };
 		91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C86207CE19000162F42 /* AppDelegate.swift */; };
 		91C01C89207CE19000162F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C88207CE19000162F42 /* ViewController.swift */; };
 		91C01C8C207CE19000162F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8A207CE19000162F42 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		913B5A26207E9837006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beontime_logo_32x32.png; path = ../../../../Downloads/BeOnTime_Android/app/src/main/res/drawable/beontime_logo_32x32.png; sourceTree = "<group>"; };
+		913B5A27207E9837006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beontime_logo_639x165.png; path = ../../../../Downloads/BeOnTime_Android/app/src/main/res/drawable/beontime_logo_639x165.png; sourceTree = "<group>"; };
+		913B5A28207E9837006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beontime_logo_225x225.png; path = ../../../../Downloads/BeOnTime_Android/app/src/main/res/drawable/beontime_logo_225x225.png; sourceTree = "<group>"; };
 		91C01C83207CE19000162F42 /* BeOnTime-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeOnTime-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C01C86207CE19000162F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C01C88207CE19000162F42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913B5A25207E9820006DCBFD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				913B5A26207E9837006DCBFD /* beontime_logo_32x32.png */,
+				913B5A28207E9837006DCBFD /* beontime_logo_225x225.png */,
+				913B5A27207E9837006DCBFD /* beontime_logo_639x165.png */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		91C01C7A207CE19000162F42 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +70,7 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				913B5A25207E9820006DCBFD /* New Group */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C88207CE19000162F42 /* ViewController.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
@@ -125,6 +142,9 @@
 			files = (
 				91C01C91207CE19000162F42 /* LaunchScreen.storyboard in Resources */,
 				91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */,
+				913B5A2B207E9837006DCBFD /* beontime_logo_225x225.png in Resources */,
+				913B5A2A207E9837006DCBFD /* beontime_logo_639x165.png in Resources */,
+				913B5A29207E9837006DCBFD /* beontime_logo_32x32.png in Resources */,
 				91C01C8C207CE19000162F42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
