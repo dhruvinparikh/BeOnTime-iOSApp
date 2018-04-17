@@ -10,24 +10,6 @@
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
-		913B5A34207EA877006DCBFD /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A33207EA876006DCBFD /* GoogleMapsBase.framework */; };
-		913B5A36207EA89F006DCBFD /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A35207EA89F006DCBFD /* GoogleMaps.framework */; };
-		913B5A38207EA8AC006DCBFD /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A37207EA8AC006DCBFD /* GoogleMapsCore.framework */; };
-		913B5A3A207EA93D006DCBFD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A39207EA93D006DCBFD /* GoogleMaps.bundle */; };
-		913B5A49207EAA7B006DCBFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */; };
-		913B5A4A207EAA7B006DCBFD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A3D207EAA7B006DCBFD /* libz.tbd */; };
-		913B5A4B207EAA7B006DCBFD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A3E207EAA7B006DCBFD /* CoreLocation.framework */; };
-		913B5A4C207EAA7B006DCBFD /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A3F207EAA7B006DCBFD /* libc++.1.tbd */; };
-		913B5A4D207EAA7B006DCBFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A40207EAA7B006DCBFD /* UIKit.framework */; };
-		913B5A4E207EAA7B006DCBFD /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A41207EAA7B006DCBFD /* GLKit.framework */; };
-		913B5A4F207EAA7B006DCBFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A42207EAA7B006DCBFD /* SystemConfiguration.framework */; };
-		913B5A50207EAA7B006DCBFD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A43207EAA7B006DCBFD /* ImageIO.framework */; };
-		913B5A51207EAA7B006DCBFD /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A44207EAA7B006DCBFD /* Accelerate.framework */; };
-		913B5A52207EAA7B006DCBFD /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A45207EAA7B006DCBFD /* CoreImage.framework */; };
-		913B5A53207EAA7B006DCBFD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A46207EAA7B006DCBFD /* CoreText.framework */; };
-		913B5A54207EAA7B006DCBFD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */; };
-		913B5A55207EAA7B006DCBFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A48207EAA7B006DCBFD /* CoreData.framework */; };
-		913B5A57207EAADF006DCBFD /* GoogleMapsM4B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */; };
 		91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C86207CE19000162F42 /* AppDelegate.swift */; };
 		91C01C89207CE19000162F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C88207CE19000162F42 /* ViewController.swift */; };
 		91C01C8C207CE19000162F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8A207CE19000162F42 /* Main.storyboard */; };
@@ -39,10 +21,6 @@
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
-		913B5A33207EA876006DCBFD /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
-		913B5A35207EA89F006DCBFD /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		913B5A37207EA8AC006DCBFD /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
-		913B5A39207EA93D006DCBFD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		913B5A3D207EAA7B006DCBFD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		913B5A3E207EAA7B006DCBFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -71,23 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913B5A4E207EAA7B006DCBFD /* GLKit.framework in Frameworks */,
-				913B5A57207EAADF006DCBFD /* GoogleMapsM4B.framework in Frameworks */,
-				913B5A4D207EAA7B006DCBFD /* UIKit.framework in Frameworks */,
-				913B5A49207EAA7B006DCBFD /* CoreGraphics.framework in Frameworks */,
-				913B5A4A207EAA7B006DCBFD /* libz.tbd in Frameworks */,
-				913B5A4B207EAA7B006DCBFD /* CoreLocation.framework in Frameworks */,
-				913B5A4C207EAA7B006DCBFD /* libc++.1.tbd in Frameworks */,
-				913B5A4F207EAA7B006DCBFD /* SystemConfiguration.framework in Frameworks */,
-				913B5A50207EAA7B006DCBFD /* ImageIO.framework in Frameworks */,
-				913B5A51207EAA7B006DCBFD /* Accelerate.framework in Frameworks */,
-				913B5A52207EAA7B006DCBFD /* CoreImage.framework in Frameworks */,
-				913B5A53207EAA7B006DCBFD /* CoreText.framework in Frameworks */,
-				913B5A54207EAA7B006DCBFD /* CoreTelephony.framework in Frameworks */,
-				913B5A55207EAA7B006DCBFD /* CoreData.framework in Frameworks */,
-				913B5A36207EA89F006DCBFD /* GoogleMaps.framework in Frameworks */,
-				913B5A38207EA8AC006DCBFD /* GoogleMapsCore.framework in Frameworks */,
-				913B5A34207EA877006DCBFD /* GoogleMapsBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +106,6 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				913B5A39207EA93D006DCBFD /* GoogleMaps.bundle */,
-				913B5A37207EA8AC006DCBFD /* GoogleMapsCore.framework */,
-				913B5A35207EA89F006DCBFD /* GoogleMaps.framework */,
-				913B5A33207EA876006DCBFD /* GoogleMapsBase.framework */,
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C88207CE19000162F42 /* ViewController.swift */,
@@ -225,7 +182,6 @@
 				91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */,
 				91C01C8C207CE19000162F42 /* Main.storyboard in Resources */,
 				913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */,
-				913B5A3A207EA93D006DCBFD /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
