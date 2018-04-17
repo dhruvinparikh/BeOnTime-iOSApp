@@ -10,8 +10,11 @@
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
+		917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B520868BF4008E6CA7 /* LoginViewController.swift */; };
+		917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */; };
+		917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B92086902E008E6CA7 /* ManagerViewController.swift */; };
+		917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */; };
 		91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C86207CE19000162F42 /* AppDelegate.swift */; };
-		91C01C89207CE19000162F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C88207CE19000162F42 /* ViewController.swift */; };
 		91C01C8C207CE19000162F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8A207CE19000162F42 /* Main.storyboard */; };
 		91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8D207CE19000162F42 /* Assets.xcassets */; };
 		91C01C91207CE19000162F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */; };
@@ -35,9 +38,12 @@
 		913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		913B5A48207EAA7B006DCBFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = "../../Downloads/GoogleMaps-2.6.0/M4B/Frameworks/GoogleMapsM4B.framework"; sourceTree = "<group>"; };
+		917327B520868BF4008E6CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmloyeeViewController.swift; sourceTree = "<group>"; };
+		917327B92086902E008E6CA7 /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
+		917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewTableViewController.swift; sourceTree = "<group>"; };
 		91C01C83207CE19000162F42 /* BeOnTime-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeOnTime-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C01C86207CE19000162F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91C01C88207CE19000162F42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91C01C8B207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91C01C8D207CE19000162F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C01C90207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,11 +114,14 @@
 			children = (
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
-				91C01C88207CE19000162F42 /* ViewController.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
 				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
 				91C01C92207CE19000162F42 /* Info.plist */,
+				917327B520868BF4008E6CA7 /* LoginViewController.swift */,
+				917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */,
+				917327B92086902E008E6CA7 /* ManagerViewController.swift */,
+				917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */,
 			);
 			path = "BeOnTime-iOSApp";
 			sourceTree = "<group>";
@@ -192,7 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C01C89207CE19000162F42 /* ViewController.swift in Sources */,
+				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
+				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
+				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
+				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

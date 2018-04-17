@@ -14,16 +14,16 @@
         <!--BeOnTime Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="BeOnTime Login" id="BYZ-38-t0r" customClass="ViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="BeOnTime Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="beontime_logo_639x165.png" translatesAutoresizingMaskIntoConstraints="NO" id="CgZ-dH-Axd">
-                                <rect key="frame" x="16" y="61" width="288" height="141"/>
+                                <rect key="frame" x="16" y="36" width="288" height="141"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYW-6J-rk9">
-                                <rect key="frame" x="16" y="454" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYW-6J-rk9">
+                                <rect key="frame" x="16" y="386" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iYW-6J-rk9" secondAttribute="height" multiplier="48:5" id="Kvr-9c-a3B"/>
@@ -32,15 +32,19 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZ0-0m-z4h"/>
+                                    <segue destination="dyK-OA-zhH" kind="show" identifier="toManagerViewController" id="NJI-s3-Rnl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YNe-Iw-H50">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
+                                <rect key="frame" x="16" y="225" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SGN-hO-X3c">
-                                <rect key="frame" x="16" y="353" width="288" height="30"/>
+                                <rect key="frame" x="16" y="300" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="password"/>
@@ -68,6 +72,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tfPassword" destination="SGN-hO-X3c" id="NwN-gg-Cnz"/>
+                        <outlet property="tfUsername" destination="YNe-Iw-H50" id="YAU-tw-myH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +84,7 @@
         <!--EmployeeListTableView-->
         <scene sceneID="e33-Vd-JPz">
             <objects>
-                <tableViewController title="EmployeeListTableView" id="iPK-gA-nEw" sceneMemberID="viewController">
+                <tableViewController title="EmployeeListTableView" id="iPK-gA-nEw" customClass="EmployeeViewTableViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KkE-Ty-ZuA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +142,7 @@
         <!--BeOntime(Employee)-->
         <scene sceneID="qvs-aj-Pfy">
             <objects>
-                <viewController title="BeOntime(Employee)" id="7Dl-tY-Ccz" sceneMemberID="viewController">
+                <viewController title="BeOntime(Employee)" id="7Dl-tY-Ccz" customClass="EmloyeeViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLu-Oy-fWb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="840" y="116.19718309859155"/>
         </scene>
-        <!--View Controller-->
+        <!--Manager View Controller-->
         <scene sceneID="cEy-Mi-ExE">
             <objects>
-                <viewController id="dyK-OA-zhH" sceneMemberID="viewController">
+                <viewController id="dyK-OA-zhH" customClass="ManagerViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOg-7a-mjz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,11 +274,17 @@
                                 <state key="normal" title="EMPLOYEE LIST">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iPK-gA-nEw" kind="show" id="LKd-08-SE8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ZtP-d4-bTT"/>
                     </view>
+                    <connections>
+                        <segue destination="7Dl-tY-Ccz" kind="show" identifier="toEmployeeViewController" id="i6I-hf-uBw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYB-8C-h7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
