@@ -22,18 +22,22 @@ class LoginViewController: UIViewController {
          */
         
         //test code for switching view controllers
-        if(tfUsername.text == "employee"){
-            //performSegue(withIdentifier: "toEmployeViewController", sender: nil)
-            performSegue(withIdentifier: "toManagerViewController", sender: nil)
-        }
-        /*else if(tfUsername.text == "manager"){
-            performSegue(withIdentifier: "toManagerViewController", sender: nil)
-        }*/
         
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let employeeViewController = storyBoard.instantiateViewController(withIdentifier: "EmployeeViewController") as! EmloyeeViewController
+        let managerViewController = storyBoard.instantiateViewController(withIdentifier: "ManagerViewController") as! ManagerViewController
+        if(tfUsername.text == "employee"){
+            self.present(employeeViewController, animated: true, completion: nil)
+            //performSegue(withIdentifier: "toEmployeViewController", sender: nil)
+            //performSegue(withIdentifier: "toManagerViewController", sender: nil)
+        }
+        else if(tfUsername.text == "manager"){
+            //performSegue(withIdentifier: "toManagerViewController", sender: nil)
+            self.present(managerViewController, animated: true, completion: nil)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
