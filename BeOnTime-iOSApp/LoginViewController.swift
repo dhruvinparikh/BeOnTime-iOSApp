@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let employeeViewController = storyBoard.instantiateViewController(withIdentifier: "EmployeeViewController") as! EmloyeeViewController
         let managerViewController = storyBoard.instantiateViewController(withIdentifier: "ManagerViewController") as! ManagerViewController
+        //let managerNavigationController = storyBoard.instantiateViewController(withIdentifier: "ManagerNavigationContoller") as! UINavigationController
         if(tfUsername.text == "employee"){
             self.present(employeeViewController, animated: true, completion: nil)
             //performSegue(withIdentifier: "toEmployeViewController", sender: nil)
@@ -33,7 +34,11 @@ class LoginViewController: UIViewController {
         }
         else if(tfUsername.text == "manager"){
             //performSegue(withIdentifier: "toManagerViewController", sender: nil)
-            self.present(managerViewController, animated: true, completion: nil)
+            //self.present(managerViewController, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(managerViewController, animated: true)
+            //self.dismiss(animated: false, completion: nil)
+            performSegue(withIdentifier: "toManagerViewController", sender: nil)
+            
         }
     }
     override func viewDidLoad() {
