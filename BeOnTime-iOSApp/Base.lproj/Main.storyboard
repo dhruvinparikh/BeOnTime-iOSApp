@@ -295,6 +295,9 @@
                                 <state key="normal" title="EMPLOYEE LIST">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iPK-gA-nEw" kind="show" id="47w-H2-NaQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
