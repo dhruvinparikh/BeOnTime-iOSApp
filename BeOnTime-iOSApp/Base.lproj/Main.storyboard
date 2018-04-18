@@ -13,7 +13,7 @@
         <!--BeOnTime Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="BeOnTime Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="BeOnTime Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +289,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="E8r-zL-KW9"/>
+                                    <action selector="btnLogout:" destination="dyK-OA-zhH" eventType="touchUpInside" id="sjq-bq-AiT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -325,7 +325,4 @@
     <resources>
         <image name="beontime_logo_639x165.png" width="639" height="165"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="E8r-zL-KW9"/>
-    </inferredMetricsTieBreakers>
 </document>

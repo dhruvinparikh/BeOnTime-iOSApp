@@ -10,6 +10,11 @@ import UIKit
 
 class ManagerViewController: UIViewController {
 
+    @IBAction func btnLogout(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.present(loginViewController, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

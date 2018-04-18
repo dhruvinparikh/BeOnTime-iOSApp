@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let employeeViewController = storyBoard.instantiateViewController(withIdentifier: "EmployeeViewController") as! EmloyeeViewController
-        let managerViewController = storyBoard.instantiateViewController(withIdentifier: "ManagerViewController") as! ManagerViewController
+        //let managerViewController = storyBoard.instantiateViewController(withIdentifier: "ManagerViewController") as! ManagerViewController
         //let managerNavigationController = storyBoard.instantiateViewController(withIdentifier: "ManagerNavigationContoller") as! UINavigationController
         if(tfUsername.text == "employee"){
             self.present(employeeViewController, animated: true, completion: nil)
