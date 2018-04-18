@@ -22,23 +22,25 @@ class LoginViewController: UIViewController {
          */
         
         //test code for switching view controllers
-        
+        //Instantiating storyboard instance
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //create object of the intented view controller to be diplayed
         let employeeViewController = storyBoard.instantiateViewController(withIdentifier: "EmployeeViewController") as! EmloyeeViewController
-        //let managerViewController = storyBoard.instantiateViewController(withIdentifier: "ManagerViewController") as! ManagerViewController
-        //let managerNavigationController = storyBoard.instantiateViewController(withIdentifier: "ManagerNavigationContoller") as! UINavigationController
+        
+        //Writing preferences
+        let preferences = UserDefaults.standard
+        let currentLevel = "test string"
+        let currentLevelKey = "currentLevel"
+        preferences.set(currentLevel, forKey: currentLevelKey)
+        preferences.synchronize()
+        
+        
         if(tfUsername.text == "employee"){
+            //self.dismiss(animated: true, completion: nil)
             self.present(employeeViewController, animated: true, completion: nil)
-            //performSegue(withIdentifier: "toEmployeViewController", sender: nil)
-            //performSegue(withIdentifier: "toManagerViewController", sender: nil)
         }
         else if(tfUsername.text == "manager"){
-            //performSegue(withIdentifier: "toManagerViewController", sender: nil)
-            //self.present(managerViewController, animated: true, completion: nil)
-            //self.navigationController?.pushViewController(managerViewController, animated: true)
-            //self.dismiss(animated: false, completion: nil)
             performSegue(withIdentifier: "toManagerViewController", sender: nil)
-            
         }
     }
     override func viewDidLoad() {
@@ -49,8 +51,16 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        clear();
     }
     
+    
+    //function to clear login credentials field
+    
+    func clear(){
+        tfPassword.text="";
+        tfUsername.text="";
+    }
 
     /*
     // MARK: - Navigation

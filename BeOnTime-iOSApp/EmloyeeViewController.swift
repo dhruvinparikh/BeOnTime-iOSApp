@@ -10,11 +10,19 @@ import UIKit
 
 class EmloyeeViewController: UIViewController {
 
+    @IBOutlet weak var lblUserid: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-    }
+        //Reading preferences
+        let preferences = UserDefaults.standard
+        
+        let currentLevelKey = "currentLevel"
+        let currentLevel = preferences.string(forKey: currentLevelKey)
+        
+        lblUserid.text = currentLevel
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
