@@ -12,6 +12,7 @@
 		0E54CAC1208A770F00CFFA7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC0208A770F00CFFA7C /* ViewController.swift */; };
 		0E54CAC3208A774900CFFA7C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC2208A774900CFFA7C /* TableViewCell.swift */; };
 		0E54CAC5208A81A400CFFA7C /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC4208A81A400CFFA7C /* ShiftViewController.swift */; };
+		0E54CAC7208A943400CFFA7C /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC6208A943400CFFA7C /* TableController.swift */; };
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
@@ -31,6 +32,7 @@
 		0E54CAC0208A770F00CFFA7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E54CAC2208A774900CFFA7C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0E54CAC4208A81A400CFFA7C /* ShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
+		0E54CAC6208A943400CFFA7C /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				0E54CAC0208A770F00CFFA7C /* ViewController.swift */,
 				0E54CAC2208A774900CFFA7C /* TableViewCell.swift */,
 				0E54CAC4208A81A400CFFA7C /* ShiftViewController.swift */,
+				0E54CAC6208A943400CFFA7C /* TableController.swift */,
 			);
 			path = "BeOnTime-iOSApp";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
+				0E54CAC7208A943400CFFA7C /* TableController.swift in Sources */,
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
 				0E54CAC3208A774900CFFA7C /* TableViewCell.swift in Sources */,
 				0E54CABD208A743500CFFA7C /* Workers.swift in Sources */,

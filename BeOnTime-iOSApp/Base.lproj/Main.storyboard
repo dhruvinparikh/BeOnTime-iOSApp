@@ -140,7 +140,7 @@
         <!--Worker Shift-->
         <scene sceneID="UJ4-L2-7Ij">
             <objects>
-                <viewController id="mG0-ZU-R8O" customClass="ShiftViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mG0-ZU-R8O" customClass="TableController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vat-oW-Vkd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" id="Yfs-d7-2zy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cell" id="Yfs-d7-2zy">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yfs-d7-2zy" id="Nj1-SZ-Zun">
@@ -167,7 +167,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" id="ueU-9Z-SOU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cell1" id="ueU-9Z-SOU">
                                         <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueU-9Z-SOU" id="NH6-ZO-TzH">
@@ -176,7 +176,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" id="rRq-xD-ef8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cell2" id="rRq-xD-ef8">
                                         <rect key="frame" x="0.0" y="116" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rRq-xD-ef8" id="Nzs-wg-gW7">
@@ -243,7 +243,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back to Worker Shift" id="HBD-4f-QmL"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="H2B-bi-Jbm" kind="show" identifier="segue1" id="exA-ih-rUw"/>
+                        <segue destination="H2B-bi-Jbm" kind="show" identifier="segue" id="exA-ih-rUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIS-Zb-27S" userLabel="First Responder" sceneMemberID="firstResponder"/>
