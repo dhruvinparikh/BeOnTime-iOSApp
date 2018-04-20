@@ -140,7 +140,7 @@
         <!--Worker Shift-->
         <scene sceneID="UJ4-L2-7Ij">
             <objects>
-                <viewController id="mG0-ZU-R8O" customClass="TableController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mG0-ZU-R8O" customClass="ViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vat-oW-Vkd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,7 +516,7 @@
                     </view>
                     <connections>
                         <outlet property="lblUserid" destination="EWG-mJ-i0q" id="Z6W-Mf-wQn"/>
-                        <segue destination="NhT-2e-dR1" kind="show" identifier="segue" id="ywp-xx-ff9"/>
+                        <segue destination="NhT-2e-dR1" kind="show" identifier="segue" id="5cO-MQ-wkm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdb-n2-feW" userLabel="First Responder" sceneMemberID="firstResponder"/>
