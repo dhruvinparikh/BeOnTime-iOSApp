@@ -522,6 +522,9 @@
                                 <state key="normal" title="Search Shift">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="Searchbutton:" destination="7Dl-tY-Ccz" eventType="touchUpInside" id="hoS-QB-AH3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -529,7 +532,7 @@
                     </view>
                     <connections>
                         <outlet property="lblUserid" destination="EWG-mJ-i0q" id="Z6W-Mf-wQn"/>
-                        <segue destination="mG0-ZU-R8O" kind="show" id="88i-3K-0nh"/>
+                        <segue destination="mG0-ZU-R8O" kind="show" identifier="segue" id="88i-3K-0nh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdb-n2-feW" userLabel="First Responder" sceneMemberID="firstResponder"/>
