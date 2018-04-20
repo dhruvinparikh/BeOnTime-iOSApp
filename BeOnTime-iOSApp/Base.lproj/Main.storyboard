@@ -238,8 +238,6 @@
                         <viewLayoutGuide key="safeArea" id="USO-Qk-ucx"/>
                     </view>
                     <connections>
-                        <outlet property="lblEndDate" destination="BCa-lG-GMC" id="nof-1H-YdP"/>
-                        <outlet property="lblStart" destination="Ty3-6d-m14" id="oS2-3i-mwH"/>
                         <segue destination="aL9-zz-2Zg" kind="showDetail" id="obu-Xh-Ha0"/>
                     </connections>
                 </viewController>
