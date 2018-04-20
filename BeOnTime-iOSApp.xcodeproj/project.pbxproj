@@ -7,17 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
+		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
+		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
+		917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B520868BF4008E6CA7 /* LoginViewController.swift */; };
+		917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */; };
+		917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B92086902E008E6CA7 /* ManagerViewController.swift */; };
+		917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */; };
 		91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C86207CE19000162F42 /* AppDelegate.swift */; };
-		91C01C89207CE19000162F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C88207CE19000162F42 /* ViewController.swift */; };
 		91C01C8C207CE19000162F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8A207CE19000162F42 /* Main.storyboard */; };
 		91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8D207CE19000162F42 /* Assets.xcassets */; };
 		91C01C91207CE19000162F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
+		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
+		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
+		913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		913B5A3D207EAA7B006DCBFD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		913B5A3E207EAA7B006DCBFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		913B5A3F207EAA7B006DCBFD /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		913B5A40207EAA7B006DCBFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		913B5A41207EAA7B006DCBFD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		913B5A42207EAA7B006DCBFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		913B5A43207EAA7B006DCBFD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		913B5A44207EAA7B006DCBFD /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		913B5A45207EAA7B006DCBFD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		913B5A46207EAA7B006DCBFD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		913B5A48207EAA7B006DCBFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = "../../Downloads/GoogleMaps-2.6.0/M4B/Frameworks/GoogleMapsM4B.framework"; sourceTree = "<group>"; };
+		917327B520868BF4008E6CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmloyeeViewController.swift; sourceTree = "<group>"; };
+		917327B92086902E008E6CA7 /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
+		917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewTableViewController.swift; sourceTree = "<group>"; };
 		91C01C83207CE19000162F42 /* BeOnTime-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeOnTime-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C01C86207CE19000162F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91C01C88207CE19000162F42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91C01C8B207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91C01C8D207CE19000162F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C01C90207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,11 +61,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913B5A2C207E99F4006DCBFD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */,
+				913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */,
+				913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		913B5A3B207EAA7B006DCBFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */,
+				913B5A44207EAA7B006DCBFD /* Accelerate.framework */,
+				913B5A48207EAA7B006DCBFD /* CoreData.framework */,
+				913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */,
+				913B5A45207EAA7B006DCBFD /* CoreImage.framework */,
+				913B5A3E207EAA7B006DCBFD /* CoreLocation.framework */,
+				913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */,
+				913B5A46207EAA7B006DCBFD /* CoreText.framework */,
+				913B5A41207EAA7B006DCBFD /* GLKit.framework */,
+				913B5A43207EAA7B006DCBFD /* ImageIO.framework */,
+				913B5A3F207EAA7B006DCBFD /* libc++.1.tbd */,
+				913B5A3D207EAA7B006DCBFD /* libz.tbd */,
+				913B5A42207EAA7B006DCBFD /* SystemConfiguration.framework */,
+				913B5A40207EAA7B006DCBFD /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91C01C7A207CE19000162F42 = {
 			isa = PBXGroup;
 			children = (
 				91C01C85207CE19000162F42 /* BeOnTime-iOSApp */,
 				91C01C84207CE19000162F42 /* Products */,
+				913B5A3B207EAA7B006DCBFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +112,16 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
-				91C01C88207CE19000162F42 /* ViewController.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
 				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
 				91C01C92207CE19000162F42 /* Info.plist */,
+				917327B520868BF4008E6CA7 /* LoginViewController.swift */,
+				917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */,
+				917327B92086902E008E6CA7 /* ManagerViewController.swift */,
+				917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */,
 			);
 			path = "BeOnTime-iOSApp";
 			sourceTree = "<group>";
@@ -123,9 +185,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */,
 				91C01C91207CE19000162F42 /* LaunchScreen.storyboard in Resources */,
+				913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */,
 				91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */,
 				91C01C8C207CE19000162F42 /* Main.storyboard in Resources */,
+				913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C01C89207CE19000162F42 /* ViewController.swift in Sources */,
+				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
+				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
+				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
+				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +343,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VK4HG94PV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeOnTime-iOSApp",
+				);
 				INFOPLIST_FILE = "BeOnTime-iOSApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BeOnTime.BeOnTime-iOSApp";
@@ -289,6 +362,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VK4HG94PV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeOnTime-iOSApp",
+				);
 				INFOPLIST_FILE = "BeOnTime-iOSApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BeOnTime.BeOnTime-iOSApp";
