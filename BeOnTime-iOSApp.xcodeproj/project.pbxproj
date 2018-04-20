@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E54CABD208A743500CFFA7C /* Workers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CABC208A743500CFFA7C /* Workers.swift */; };
+		0E54CABF208A745900CFFA7C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CABE208A745900CFFA7C /* DetailsViewController.swift */; };
+		0E54CAC1208A770F00CFFA7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC0208A770F00CFFA7C /* ViewController.swift */; };
+		0E54CAC3208A774900CFFA7C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC2208A774900CFFA7C /* TableViewCell.swift */; };
+		0E54CAC5208A81A400CFFA7C /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CAC4208A81A400CFFA7C /* ShiftViewController.swift */; };
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E54CABC208A743500CFFA7C /* Workers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workers.swift; sourceTree = "<group>"; };
+		0E54CABE208A745900CFFA7C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		0E54CAC0208A770F00CFFA7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E54CAC2208A774900CFFA7C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0E54CAC4208A81A400CFFA7C /* ShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
@@ -122,6 +132,11 @@
 				917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */,
 				917327B92086902E008E6CA7 /* ManagerViewController.swift */,
 				917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */,
+				0E54CABC208A743500CFFA7C /* Workers.swift */,
+				0E54CABE208A745900CFFA7C /* DetailsViewController.swift */,
+				0E54CAC0208A770F00CFFA7C /* ViewController.swift */,
+				0E54CAC2208A774900CFFA7C /* TableViewCell.swift */,
+				0E54CAC4208A81A400CFFA7C /* ShiftViewController.swift */,
 			);
 			path = "BeOnTime-iOSApp";
 			sourceTree = "<group>";
@@ -204,8 +219,13 @@
 				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
+				0E54CAC3208A774900CFFA7C /* TableViewCell.swift in Sources */,
+				0E54CABD208A743500CFFA7C /* Workers.swift in Sources */,
+				0E54CABF208A745900CFFA7C /* DetailsViewController.swift in Sources */,
 				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
+				0E54CAC1208A770F00CFFA7C /* ViewController.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
+				0E54CAC5208A81A400CFFA7C /* ShiftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
