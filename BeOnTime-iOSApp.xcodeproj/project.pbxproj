@@ -10,6 +10,8 @@
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
+		914C67BD208AF013006078D6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C67BC208AF013006078D6 /* Login.swift */; };
+		914C67BF208AF3A0006078D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C67BE208AF3A0006078D6 /* User.swift */; };
 		917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B520868BF4008E6CA7 /* LoginViewController.swift */; };
 		917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */; };
 		917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B92086902E008E6CA7 /* ManagerViewController.swift */; };
@@ -38,6 +40,8 @@
 		913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		913B5A48207EAA7B006DCBFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = "../../Downloads/GoogleMaps-2.6.0/M4B/Frameworks/GoogleMapsM4B.framework"; sourceTree = "<group>"; };
+		914C67BC208AF013006078D6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		914C67BE208AF3A0006078D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		917327B520868BF4008E6CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmloyeeViewController.swift; sourceTree = "<group>"; };
 		917327B92086902E008E6CA7 /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		914C67BB208AEFE4006078D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				914C67BC208AF013006078D6 /* Login.swift */,
+				914C67BE208AF3A0006078D6 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		91C01C7A207CE19000162F42 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				914C67BB208AEFE4006078D6 /* Model */,
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
@@ -204,8 +218,10 @@
 				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
+				914C67BD208AF013006078D6 /* Login.swift in Sources */,
 				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
+				914C67BF208AF3A0006078D6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,15 +33,104 @@ class LoginViewController: UIViewController {
         let currentLevelKey = "currentLevel"
         preferences.set(currentLevel, forKey: currentLevelKey)
         preferences.synchronize()
+        /*
+         Role id    Role
+         10         Manager
+         11         Client
+         12         Employee
+         */
+        //Sending login request
+        let headers = [
+            "Cookie": "__test=17afbe401e04ba6521bcfe79d0559007; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Cache-Control": "no-cache"
+        ]
+        let login = Login(username: tfUsername.text!, password: tfPassword.text!)
+        let postData = NSMutableData(data: "operation=LoginAuthentication".data(using: String.Encoding.utf8)!)
+        let username = "&username="+login.username!
+        let password = "&password="+login.password!
+        postData.append(username.data(using: String.Encoding.utf8)!)
+        postData.append(password.data(using: String.Encoding.utf8)!)
         
+        let request = NSMutableURLRequest(url: NSURL(string: "http://beontime.byethost16.com/android_project/zf_android_request.php?i=1")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
         
-        if(tfUsername.text == "employee"){
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error ?? "Error")
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse ?? "No Response")
+                if let data = data {
+                    print(data)
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: [])
+                        print(json)
+                        /***/
+                        var dictonary:NSDictionary?
+                        do {
+                            dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as! NSDictionary
+                            
+                            if let myDictionary = dictonary
+                            {
+                                /*print(" Company id : \(myDictionary["CompanyId"]!)")
+                                print(" first name : \(myDictionary["firstName"]!)")
+                                print(" last Name : \(myDictionary["lastName"]!)")
+                                print(" role id : \(myDictionary["roleId"]!)")
+                                print(" success : \(myDictionary["success"]!)")
+                                print(" user id : \(myDictionary["userId"]!)")
+                                print(" username : \(myDictionary["username"]!)")
+                                let i=(myDictionary["CompanyId"] as? String)!
+                                print("company_id: ",i)
+                                user.companyId=Int(i)!*/
+                                switch((myDictionary["roleId"] as! NSString).intValue)
+                                {
+                                case 10://Manager
+                                    //Updating UI on a thread other than the main thread is a common mistake that can result in missed UI updates, visual defects, data corruptions, and crashes.
+                                    //tasks such as networking are often executed in the background, and provide a completion handler to signal completion. Attempting to read or update the UI from a completion handler may cause problems.
+                                    //Dispatch the call to update the UI.
+                                    DispatchQueue.main.async {
+                                        self.performSegue(withIdentifier: "toManagerViewController", sender: nil)
+                                    }
+                                    break;
+                                case 11://Client
+                                    break;
+                                case 12://Employee
+                                    DispatchQueue.main.async {
+                                        self.present(employeeViewController, animated: true, completion: nil)
+                                    }
+                                    break;
+                                default:
+                                    break;
+                                }
+                            }
+                            
+                        } catch let error as NSError {
+                            print(error)
+                        }
+                    }
+                        /***/
+                    catch {
+                        print(error)
+                    }
+                    
+                }
+                
+            }})
+        
+        dataTask.resume()
+        /*if(tfUsername.text == "employee"){
             //self.dismiss(animated: true, completion: nil)
             self.present(employeeViewController, animated: true, completion: nil)
         }
         else if(tfUsername.text == "manager"){
             performSegue(withIdentifier: "toManagerViewController", sender: nil)
-        }
+        }*/
     }
     override func viewDidLoad() {
         super.viewDidLoad()
