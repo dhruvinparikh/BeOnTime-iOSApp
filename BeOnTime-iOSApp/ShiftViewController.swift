@@ -19,7 +19,7 @@ class ShiftViewController: UIViewController {
     @IBAction func btnSearch(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         //create object of the intented view controller to be diplayed
-        let detailsViewController = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        _ = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
     
         let headers = [
             "Cookie": "; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/",
@@ -29,12 +29,14 @@ class ShiftViewController: UIViewController {
         ]
         let dateFormatter = DateFormatter()
         var date:Date?
-        dateFormatter.dateStyle = DateFormatter.Style.short
-        dateFormatter.timeStyle = DateFormatter.Style.short
+        //dateFormatter.dateStyle = DateFormatter.Style.short
+        //dateFormatter.timeStyle = DateFormatter.Style.short
         
       //  let strDate = dateFormatter.string(from: datePicker.date)
-        _ = Shift(StartDate: PickerStart.date, EndDate: PickerEnd.date)
+        var shift = Shift(StartDate: PickerStart.date, EndDate: PickerEnd.date)
          let postData = NSMutableData(data: "operation=getClientShifts".data(using: String.Encoding.utf16)!)
+        let postData1 = NSMutableData(data: "operation= filterShifts".data(using: String.Encoding.utf16)!)
+
         let StartDate = "&StartDate" + dateFormatter.string(from: date!)
         let EndDate = "&EndDate" + dateFormatter.string(from: date!)
         
@@ -47,6 +49,7 @@ class ShiftViewController: UIViewController {
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = postData as Data
+        request.httpBody = postData1 as Data
         
        // let session = URLSession.shared
         let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
@@ -64,6 +67,7 @@ class ShiftViewController: UIViewController {
                         var dictonary:NSDictionary?
                         do {
                                 dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as! NSDictionary
+                            
                             if let myDictionary = dictonary
                             {
                                 if(myDictionary["success"] as! Int == 1){
