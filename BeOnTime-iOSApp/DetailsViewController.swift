@@ -23,7 +23,7 @@ class DetailsViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
             UIAlertAction in
             NSLog("Cancel Pressed")
-            print("Cancel pressed succcessfully")
+            print("Cancel pressed successfully")
             
         }
         alertController.addAction(cancelAction)
