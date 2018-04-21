@@ -10,6 +10,10 @@ import UIKit
 
 class ManagerViewController: UIViewController {
 
+    //Created object for user greet label
+    @IBOutlet weak var lblUser: UILabel!
+    //Created object for user's company ID
+    @IBOutlet weak var lblCompanyId: UILabel!
     @IBAction func btnLogout(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
@@ -18,8 +22,13 @@ class ManagerViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //Reading preferences
+        let preferences = UserDefaults.standard
+        
+        let currentLevelKey = "CompanyId"
+        let currentLevel = preferences.string(forKey: currentLevelKey)
+        lblUser.text = "Hello " + preferences.string(forKey: "firstname")! + " " + preferences.string(forKey: "lastname")!
+        lblCompanyId.text = currentLevel
     }
 
     override func didReceiveMemoryWarning() {

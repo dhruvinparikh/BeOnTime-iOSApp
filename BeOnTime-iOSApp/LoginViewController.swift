@@ -14,7 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tfUsername: UITextField!
     //Object created for password text field on login
     @IBOutlet weak var tfPassword: UITextField!
-    
+    //Object created for error on login failure
+    @IBOutlet weak var lblError: UILabel!
     //Action Event to fire when user clicks login
     @IBAction func btnLogin(_ sender: UIButton) {
         /*
@@ -27,12 +28,13 @@ class LoginViewController: UIViewController {
         //create object of the intented view controller to be diplayed
         let employeeViewController = storyBoard.instantiateViewController(withIdentifier: "EmployeeViewController") as! EmloyeeViewController
         
-        //Writing preferences
+        /********Writing preferences Sample************
         let preferences = UserDefaults.standard
         let currentLevel = "test string"
         let currentLevelKey = "currentLevel"
         preferences.set(currentLevel, forKey: currentLevelKey)
         preferences.synchronize()
+        *************/
         /*
          Role id    Role
          10         Manager
@@ -78,16 +80,26 @@ class LoginViewController: UIViewController {
                             
                             if let myDictionary = dictonary
                             {
-                                /*print(" Company id : \(myDictionary["CompanyId"]!)")
-                                print(" first name : \(myDictionary["firstName"]!)")
-                                print(" last Name : \(myDictionary["lastName"]!)")
-                                print(" role id : \(myDictionary["roleId"]!)")
-                                print(" success : \(myDictionary["success"]!)")
-                                print(" user id : \(myDictionary["userId"]!)")
-                                print(" username : \(myDictionary["username"]!)")
-                                let i=(myDictionary["CompanyId"] as? String)!
-                                print("company_id: ",i)
-                                user.companyId=Int(i)!*/
+                                if(myDictionary["success"] as! Int == 1){
+                                    /*DispatchQueue.main.async {
+                                        let user = User(firstname: myDictionary["firstName"] as! String, lastname: myDictionary["lastName"] as! String, userId: myDictionary["userId"] as! Int, username: myDictionary["username"] as! String, roleId: myDictionary["roleId"] as! Int, companyId: myDictionary["CompanyId"] as! Int)
+                                        //Writing custom object to NSDefaults
+                                        var userDefaults = UserDefaults.standard
+                                        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: user)
+                                        userDefaults.set(encodedData, forKey: "user")
+                                        userDefaults.synchronize()
+                                    }*/
+                                    let preferences = UserDefaults.standard
+                                    let companyId = myDictionary["CompanyId"]
+                                    let companyIdKey = "CompanyId"
+                                    let firstname = myDictionary["firstName"]
+                                    let firstnameKey = "firstname"
+                                    let lastname = myDictionary["lastName"]
+                                    let lastnameKey = "lastname"
+                                    preferences.set(companyId, forKey: companyIdKey)
+                                    preferences.set(firstname, forKey: firstnameKey)
+                                    preferences.set(lastname, forKey: lastnameKey)
+                                    preferences.synchronize()
                                 switch((myDictionary["roleId"] as! NSString).intValue)
                                 {
                                 case 10://Manager
@@ -95,6 +107,7 @@ class LoginViewController: UIViewController {
                                     //tasks such as networking are often executed in the background, and provide a completion handler to signal completion. Attempting to read or update the UI from a completion handler may cause problems.
                                     //Dispatch the call to update the UI.
                                     DispatchQueue.main.async {
+                                        
                                         self.performSegue(withIdentifier: "toManagerViewController", sender: nil)
                                     }
                                     break;
@@ -107,6 +120,12 @@ class LoginViewController: UIViewController {
                                     break;
                                 default:
                                     break;
+                                }
+                            }
+                                else{
+                                    DispatchQueue.main.async {
+                                        self.lblError.text="Username password combination incorrect"
+                                    }
                                 }
                             }
                             
@@ -124,13 +143,6 @@ class LoginViewController: UIViewController {
             }})
         
         dataTask.resume()
-        /*if(tfUsername.text == "employee"){
-            //self.dismiss(animated: true, completion: nil)
-            self.present(employeeViewController, animated: true, completion: nil)
-        }
-        else if(tfUsername.text == "manager"){
-            performSegue(withIdentifier: "toManagerViewController", sender: nil)
-        }*/
     }
     override func viewDidLoad() {
         super.viewDidLoad()

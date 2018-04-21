@@ -37,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYW-6J-rk9">
-                                <rect key="frame" x="16" y="407" width="288" height="30"/>
+                                <rect key="frame" x="16" y="419" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
@@ -48,12 +48,20 @@
                                     <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZ0-0m-z4h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxY-IY-fNY">
+                                <rect key="frame" x="16" y="365" width="288" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="A7k-np-ePp"/>
                     <connections>
+                        <outlet property="lblError" destination="MxY-IY-fNY" id="4y6-Jd-67W"/>
                         <outlet property="tfPassword" destination="SGN-hO-X3c" id="NwN-gg-Cnz"/>
                         <outlet property="tfUsername" destination="YNe-Iw-H50" id="YAU-tw-myH"/>
                         <segue destination="ECs-zb-TQm" kind="show" identifier="toManagerViewController" id="IJ7-DI-QN6"/>
@@ -304,6 +312,10 @@
                         <viewLayoutGuide key="safeArea" id="ZtP-d4-bTT"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZRv-m3-Zod"/>
+                    <connections>
+                        <outlet property="lblCompanyId" destination="sQI-V1-VYp" id="bE4-hK-OgZ"/>
+                        <outlet property="lblUser" destination="4Ip-6t-Wzn" id="GfU-RA-Rq5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYB-8C-h7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
