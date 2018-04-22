@@ -101,18 +101,6 @@ class ManagerViewController: UIViewController {
                                                 let company = String(describing: singleposition["CompanyName"] as! String)
                                                 annotation.subtitle=company
                                                 self.mapView.addAnnotation(annotation)
-                                                DispatchQueue.main.async {
-                                                    /*var lat:CLLocationDegrees = singleposition["CurrentLat"] as! CLLocationDegrees
-                                                    var lng:CLLocationDegrees = singleposition["CurrentLong"] as! CLLocationDegrees*/
-                                                /*let pos:CLLocationCoordinate2D = CLLocationCoordinate2DMake(singleposition["CurrentLat"] as! CLLocationDegrees, singleposition["CurrentLong"] as! CLLocationDegrees)*/
-                                                /*let annotation = MKPointAnnotation()
-                                                annotation.coordinate = pos
-                                                let name = String(describing: singleposition["FirstName"]) + " " + String(describing: singleposition["LastName"])
-                                                annotation.title = name
-                                                let company = String(describing: singleposition["CompanyName"])
-                                                annotation.subtitle=company
-                                                self.mapView.addAnnotation(annotation)*/
-                                                }
                                             }
                                         }
                                     }
