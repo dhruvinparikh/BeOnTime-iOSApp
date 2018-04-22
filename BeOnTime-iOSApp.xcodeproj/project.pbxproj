@@ -20,6 +20,8 @@
 		91C01C8C207CE19000162F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8A207CE19000162F42 /* Main.storyboard */; };
 		91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8D207CE19000162F42 /* Assets.xcassets */; };
 		91C01C91207CE19000162F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */; };
+		91FED887208D407400CE4718 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FED886208D407400CE4718 /* Employee.swift */; };
+		91FED889208D4BC800CE4718 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FED888208D4BC800CE4718 /* EmployeeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		91C01C8D207CE19000162F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C01C90207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C01C92207CE19000162F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FED886208D407400CE4718 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		91FED888208D4BC800CE4718 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				914C67BC208AF013006078D6 /* Login.swift */,
 				914C67BE208AF3A0006078D6 /* User.swift */,
+				91FED886208D407400CE4718 /* Employee.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
+				91FED888208D4BC800CE4718 /* EmployeeTableViewCell.swift */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
 				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
 				91C01C92207CE19000162F42 /* Info.plist */,
@@ -216,9 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
+				91FED887208D407400CE4718 /* Employee.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
 				914C67BD208AF013006078D6 /* Login.swift in Sources */,
+				91FED889208D4BC800CE4718 /* EmployeeTableViewCell.swift in Sources */,
 				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
 				914C67BF208AF3A0006078D6 /* User.swift in Sources */,

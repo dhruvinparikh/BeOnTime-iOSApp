@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,43 +81,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resueCell" rowHeight="212" id="omA-pT-3D5">
-                                <rect key="frame" x="0.0" y="28" width="320" height="212"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resueCell" rowHeight="132" id="omA-pT-3D5" customClass="EmployeeTableViewCell" customModule="BeOnTime_iOSApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="omA-pT-3D5" id="GvK-Hf-eKN">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="211.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coq-vN-hp2">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coq-vN-hp2">
                                             <rect key="frame" x="16" y="0.0" width="288" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avb-0h-Ua5">
-                                            <rect key="frame" x="16" y="44" width="288" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avb-0h-Ua5">
+                                            <rect key="frame" x="16" y="48" width="288" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35R-Lr-KoL">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35R-Lr-KoL">
                                             <rect key="frame" x="16" y="71" width="288" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66t-lx-606">
-                                            <rect key="frame" x="16" y="19" width="288" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66t-lx-606">
+                                            <rect key="frame" x="16" y="24" width="288" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="35R-Lr-KoL" firstAttribute="top" secondItem="avb-0h-Ua5" secondAttribute="bottom" constant="2" id="6CI-FL-VqO"/>
+                                        <constraint firstItem="66t-lx-606" firstAttribute="top" secondItem="Coq-vN-hp2" secondAttribute="bottom" constant="3" id="6n1-eb-s9u"/>
+                                        <constraint firstItem="avb-0h-Ua5" firstAttribute="top" secondItem="66t-lx-606" secondAttribute="bottom" constant="3" id="7Hm-sf-dwR"/>
+                                        <constraint firstItem="66t-lx-606" firstAttribute="trailing" secondItem="GvK-Hf-eKN" secondAttribute="trailingMargin" id="Gp7-ma-koG"/>
+                                        <constraint firstItem="66t-lx-606" firstAttribute="leading" secondItem="GvK-Hf-eKN" secondAttribute="leadingMargin" id="JOx-HB-16e"/>
+                                        <constraint firstAttribute="trailing" secondItem="Coq-vN-hp2" secondAttribute="trailing" constant="16" id="MeC-R6-qA3"/>
+                                        <constraint firstItem="avb-0h-Ua5" firstAttribute="trailing" secondItem="GvK-Hf-eKN" secondAttribute="trailingMargin" id="N2O-eG-YGe"/>
+                                        <constraint firstItem="35R-Lr-KoL" firstAttribute="top" secondItem="avb-0h-Ua5" secondAttribute="bottom" constant="2" id="NLG-t6-yhr"/>
+                                        <constraint firstItem="avb-0h-Ua5" firstAttribute="leading" secondItem="GvK-Hf-eKN" secondAttribute="leadingMargin" id="Tw9-mF-msP"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="35R-Lr-KoL" secondAttribute="bottom" constant="29" id="ZfD-Si-RZz"/>
+                                        <constraint firstItem="Coq-vN-hp2" firstAttribute="leading" secondItem="GvK-Hf-eKN" secondAttribute="leading" constant="16" id="bt5-id-e3A"/>
+                                        <constraint firstItem="66t-lx-606" firstAttribute="top" secondItem="Coq-vN-hp2" secondAttribute="bottom" constant="3" id="gTx-wq-i64"/>
+                                        <constraint firstItem="35R-Lr-KoL" firstAttribute="trailing" secondItem="GvK-Hf-eKN" secondAttribute="trailingMargin" id="i7N-7a-NGA"/>
+                                        <constraint firstItem="35R-Lr-KoL" firstAttribute="leading" secondItem="GvK-Hf-eKN" secondAttribute="leadingMargin" id="l7X-cM-NcS"/>
+                                        <constraint firstItem="avb-0h-Ua5" firstAttribute="top" secondItem="66t-lx-606" secondAttribute="bottom" constant="3" id="uIb-1g-bbU"/>
+                                        <constraint firstItem="Coq-vN-hp2" firstAttribute="top" secondItem="GvK-Hf-eKN" secondAttribute="top" id="ywG-Rk-t0M"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelAddress" destination="35R-Lr-KoL" id="nbo-83-lCX"/>
+                                    <outlet property="labelEmail" destination="avb-0h-Ua5" id="OD1-dO-C6Z"/>
+                                    <outlet property="labelID" destination="Coq-vN-hp2" id="vdA-Er-rM3"/>
+                                    <outlet property="labelName" destination="66t-lx-606" id="nLZ-88-ycQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -124,10 +145,13 @@
                             <outlet property="delegate" destination="iPK-gA-nEw" id="VfF-5a-86k"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="employeeView" destination="KkE-Ty-ZuA" id="cxT-GC-Jlt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5g-yl-Bkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881" y="116"/>
+            <point key="canvasLocation" x="3879.375" y="115.14084507042254"/>
         </scene>
         <!--BeOntime(Employee)-->
         <scene sceneID="qvs-aj-Pfy">

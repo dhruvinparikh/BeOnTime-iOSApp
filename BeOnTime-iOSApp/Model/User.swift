@@ -2,7 +2,7 @@
 //  User.swift
 //  BeOnTime-iOSApp
 //
-//  Created by Kamlesh Shah on 2018-04-21.
+//  Created by Parikh Dhruvin S. on 2018-04-21.
 //  Copyright © 2018 Parikh Dhruvin S. All rights reserved.
 //
 
@@ -40,7 +40,7 @@ class User: NSObject,NSCoding{
         aCoder.encode(lastname, forKey: "lastname")
         aCoder.encode(userId, forKey: "userid")
         aCoder.encode(username,forKey:"username")
-            aCoder.encode(roleId,forKey:"roleId")
+        aCoder.encode(roleId,forKey:"roleId")
         aCoder.encode(companyId,forKey:"companyId")
         
     }
