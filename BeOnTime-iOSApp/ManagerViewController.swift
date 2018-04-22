@@ -81,7 +81,7 @@ class ManagerViewController: UIViewController {
                         /***/
                         var dictonary:NSDictionary?
                         do {
-                            dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as! NSDictionary
+                            dictonary = try JSONSerialization.jsonObject(with: data, options: []) as! [String:AnyObject] as! NSDictionary
                             
                             if let myDictionary = dictonary
                             {
@@ -90,7 +90,22 @@ class ManagerViewController: UIViewController {
                                     if let positions = myDictionary["positions"]{
                                         for position in (positions as? NSArray)!{
                                             if let singleposition = position as? [String:Any]{
-                                                //print(singleposition["CompanyName"])
+                                                var c:String! = singleposition["CompanyName"] as! String
+                                                let lat:Double! = Double(singleposition["CurrentLat"] as! String)
+                                                let lng:Double! = Double(singleposition["CurrentLong"] as! String)
+                                                let pos:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
+                                                DispatchQueue.main.async {
+                                                    /*var lat:CLLocationDegrees = singleposition["CurrentLat"] as! CLLocationDegrees
+                                                    var lng:CLLocationDegrees = singleposition["CurrentLong"] as! CLLocationDegrees*/
+                                                /*let pos:CLLocationCoordinate2D = CLLocationCoordinate2DMake(singleposition["CurrentLat"] as! CLLocationDegrees, singleposition["CurrentLong"] as! CLLocationDegrees)*/
+                                                /*let annotation = MKPointAnnotation()
+                                                annotation.coordinate = pos
+                                                let name = String(describing: singleposition["FirstName"]) + " " + String(describing: singleposition["LastName"])
+                                                annotation.title = name
+                                                let company = String(describing: singleposition["CompanyName"])
+                                                annotation.subtitle=company
+                                                self.mapView.addAnnotation(annotation)*/
+                                                }
                                             }
                                         }
                                     }
