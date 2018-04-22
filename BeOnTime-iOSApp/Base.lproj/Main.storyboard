@@ -315,6 +315,7 @@
                     <connections>
                         <outlet property="lblCompanyId" destination="sQI-V1-VYp" id="bE4-hK-OgZ"/>
                         <outlet property="lblUser" destination="4Ip-6t-Wzn" id="GfU-RA-Rq5"/>
+                        <outlet property="mapView" destination="IuL-mU-HeT" id="jbq-qC-yIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYB-8C-h7q" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var BYETHOST_COOKIE_KEY = "17afbe401e04ba6521bcfe79d0559007";
 class LoginViewController: UIViewController {
 
     //Object created for username text field on login
@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
          */
         //Sending login request
         let headers = [
-            "Cookie": "__test=17afbe401e04ba6521bcfe79d0559007; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/",
+            "Cookie": "__test="+BYETHOST_COOKIE_KEY+"; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/",
             "Content-Type": "application/x-www-form-urlencoded",
             "Cache-Control": "no-cache"
         ]
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
                     print(data)
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(json)
+                        //print(json)
                         /***/
                         var dictonary:NSDictionary?
                         do {
