@@ -94,6 +94,13 @@ class ManagerViewController: UIViewController {
                                                 let lat:Double! = Double(singleposition["CurrentLat"] as! String)
                                                 let lng:Double! = Double(singleposition["CurrentLong"] as! String)
                                                 let pos:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
+                                                let annotation = MKPointAnnotation()
+                                                annotation.coordinate = pos
+                                                let name = String(describing: singleposition["FirstName"] as! String) + " " + String(describing: singleposition["LastName"] as! String)
+                                                annotation.title = name
+                                                let company = String(describing: singleposition["CompanyName"] as! String)
+                                                annotation.subtitle=company
+                                                self.mapView.addAnnotation(annotation)
                                                 DispatchQueue.main.async {
                                                     /*var lat:CLLocationDegrees = singleposition["CurrentLat"] as! CLLocationDegrees
                                                     var lng:CLLocationDegrees = singleposition["CurrentLong"] as! CLLocationDegrees*/
