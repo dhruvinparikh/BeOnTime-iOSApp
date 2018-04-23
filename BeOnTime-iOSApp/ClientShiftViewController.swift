@@ -33,9 +33,9 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
         
         //Configure cell
         
-        cell.lblName.text = clientShifts[indexPath.row].CompanyName
-        cell.lblStartTime.text = clientShifts[indexPath.row].ShiftStartTime
-        cell.lblEndTime.text = clientShifts[indexPath.row].ShiftEndTime
+        cell.lblName.text = ""+clientShifts[indexPath.row].CompanyName!
+        cell.lblStartTime.text = "Starts on "+clientShifts[indexPath.row].ShiftStartTime!
+        cell.lblEndTime.text = "Ends on "+clientShifts[indexPath.row].ShiftEndTime!
         
         return cell
     }
@@ -50,12 +50,14 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
     
     
     @IBAction func btnSearch(_ sender: UIButton) {
-        //Reading preferences
-        
-        let preferences = UserDefaults.standard
         clientShifts = [ClientShift]()
         self.clientShiftView.delegate = nil
         self.clientShiftView.dataSource = nil
+        
+        //Reading preferences
+        
+        let preferences = UserDefaults.standard
+        
         
         let companyIdKey = "CompanyId"
         
@@ -65,7 +67,7 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
         
         
         
-        //Sending login request
+        //Sending client shift request
         
         let headers = [
             
