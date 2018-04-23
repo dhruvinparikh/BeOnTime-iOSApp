@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-135" y="112"/>
         </scene>
-        <!--View Controller-->
+        <!--Employee Shift View Controller-->
         <scene sceneID="qX2-WN-03I">
             <objects>
-                <viewController id="bJy-uM-POo" sceneMemberID="viewController">
+                <viewController id="bJy-uM-POo" customClass="EmployeeShiftViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LtX-tC-Csa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="69" id="nPV-jj-aCy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseEmployeeShiftCell" rowHeight="69" id="nPV-jj-aCy" customClass="EmployeeShiftTableViewCell" customModule="BeOnTime_iOSApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nPV-jj-aCy" id="r1x-el-CHZ">
@@ -137,8 +137,17 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCompanyName" destination="lF2-yZ-Nqe" id="Jtz-Zt-3Ce"/>
+                                            <outlet property="lblEndDate" destination="e4e-zl-s3Y" id="Zcv-N3-rZg"/>
+                                            <outlet property="lblStartDate" destination="FaD-US-iht" id="Eut-iX-uPH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bJy-uM-POo" id="2Wn-lm-hgT"/>
+                                    <outlet property="delegate" destination="bJy-uM-POo" id="vEy-NL-hIW"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beontime_logo_639x165.png" translatesAutoresizingMaskIntoConstraints="NO" id="hJf-5q-zzA">
                                 <rect key="frame" x="8" y="68" width="288" height="69"/>
@@ -193,12 +202,13 @@
                         <viewLayoutGuide key="safeArea" id="G0v-XE-9rt"/>
                     </view>
                     <connections>
+                        <outlet property="employeeShiftView" destination="mTo-GR-Z0l" id="CfD-ax-a5W"/>
                         <segue destination="aCc-ig-Yab" kind="show" id="bM8-Hz-ibx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzh-YD-25L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="-653"/>
+            <point key="canvasLocation" x="2242.5" y="-653.87323943661977"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LIf-8K-voY">

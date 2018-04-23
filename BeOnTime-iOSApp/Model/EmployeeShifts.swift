@@ -8,11 +8,13 @@
 
 import Foundation
 class EmployeeShifts{
+    var shiftId:String?
     var companyName:String?
     var startDate:String?
     var endDate:String?
     
-    public init (companyName:String,startDate:String,endDate:String){
+    public init (shiftId:String,companyName:String,startDate:String,endDate:String){
+        self.shiftId = shiftId
         self.companyName = companyName
         self.startDate = startDate
         self.endDate = endDate
