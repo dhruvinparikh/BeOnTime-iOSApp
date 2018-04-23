@@ -19,6 +19,12 @@ class EmloyeeViewController: UIViewController {
     @IBOutlet weak var lblStartTime: UILabel!
     @IBOutlet weak var lblEndTime: UILabel!
     
+    @IBAction func btnLogout(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.present(loginViewController, animated: true, completion: nil)
+        
+    }
     @IBAction func btnSearchShift(_ sender: UIButton) {
         let headers = [
             "Cookie": "__test="+BYETHOST_COOKIE_KEY+"; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/",
