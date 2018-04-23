@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var BYETHOST_COOKIE_KEY = "17afbe401e04ba6521bcfe79d0559007";
+var BYETHOST_COOKIE_KEY = "895a8e3158de421bc458caef7f97a783";
 class LoginViewController: UIViewController {
     
     //Object created for username text field on login
@@ -115,6 +115,10 @@ class LoginViewController: UIViewController {
                                         }
                                         break;
                                     case 11://Client
+                                        DispatchQueue.main.async {
+                                            self.performSegue(withIdentifier: "totest", sender: nil)
+                                        }
+                                        
                                         break;
                                     case 12://Employee
                                         DispatchQueue.main.async {

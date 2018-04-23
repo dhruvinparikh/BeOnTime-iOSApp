@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA010D0208E761C004FC621 /* Workers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010CF208E761C004FC621 /* Workers.swift */; };
+		0EA010DA208E7698004FC621 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010D9208E7697004FC621 /* Shift.swift */; };
+		0EA010DC208E7F4C004FC621 /* ClientShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */; };
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA010CF208E761C004FC621 /* Workers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workers.swift; sourceTree = "<group>"; };
+		0EA010D9208E7697004FC621 /* Shift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftViewController.swift; sourceTree = "<group>"; };
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 		914C67BB208AEFE4006078D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0EA010CF208E761C004FC621 /* Workers.swift */,
+				0EA010D9208E7697004FC621 /* Shift.swift */,
 				914C67BC208AF013006078D6 /* Login.swift */,
 				914C67BE208AF3A0006078D6 /* User.swift */,
 				91FED886208D407400CE4718 /* Employee.swift */,
@@ -113,6 +121,7 @@
 		91C01C7A207CE19000162F42 = {
 			isa = PBXGroup;
 			children = (
+				0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */,
 				91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */,
 				91C01C85207CE19000162F42 /* BeOnTime-iOSApp */,
 				91C01C84207CE19000162F42 /* Products */,
@@ -223,11 +232,14 @@
 			files = (
 				91FED887208D407400CE4718 /* Employee.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
+				0EA010DC208E7F4C004FC621 /* ClientShiftViewController.swift in Sources */,
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
+				0EA010DA208E7698004FC621 /* Shift.swift in Sources */,
 				914C67BD208AF013006078D6 /* Login.swift in Sources */,
 				91FED88D208D6AA100CE4718 /* EmployeeListViewController.swift in Sources */,
 				91FED8CB208D798200CE4718 /* EmployeeTableViewCell.swift in Sources */,
 				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
+				0EA010D0208E761C004FC621 /* Workers.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
 				914C67BF208AF3A0006078D6 /* User.swift in Sources */,
 			);
