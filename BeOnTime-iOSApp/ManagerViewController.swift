@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class ManagerViewController: UIViewController {
-
+    
     //Created object for user greet label
     @IBOutlet weak var lblUser: UILabel!
     //Created object for user's company ID
@@ -57,7 +57,7 @@ class ManagerViewController: UIViewController {
         let cid = "&companyId="+companyId!
         postData.append(cid.data(using: String.Encoding.utf8)!)
         postData.append("&currentTime=2018-01-22".data(using: String.Encoding.utf8)!)
-
+        
         
         let request = NSMutableURLRequest(url: NSURL(string: "http://beontime.byethost16.com/android_project/zf_android_request.php?i=1")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
@@ -123,21 +123,21 @@ class ManagerViewController: UIViewController {
         
         dataTask.resume()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

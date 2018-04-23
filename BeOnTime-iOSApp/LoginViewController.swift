@@ -9,7 +9,7 @@
 import UIKit
 var BYETHOST_COOKIE_KEY = "17afbe401e04ba6521bcfe79d0559007";
 class LoginViewController: UIViewController {
-
+    
     //Object created for username text field on login
     @IBOutlet weak var tfUsername: UITextField!
     //Object created for password text field on login
@@ -29,12 +29,12 @@ class LoginViewController: UIViewController {
         let employeeViewController = storyBoard.instantiateViewController(withIdentifier: "EmployeeViewController") as! EmloyeeViewController
         
         /********Writing preferences Sample************
-        let preferences = UserDefaults.standard
-        let currentLevel = "test string"
-        let currentLevelKey = "currentLevel"
-        preferences.set(currentLevel, forKey: currentLevelKey)
-        preferences.synchronize()
-        *************/
+         let preferences = UserDefaults.standard
+         let currentLevel = "test string"
+         let currentLevelKey = "currentLevel"
+         preferences.set(currentLevel, forKey: currentLevelKey)
+         preferences.synchronize()
+         *************/
         /*
          Role id    Role
          10         Manager
@@ -82,13 +82,13 @@ class LoginViewController: UIViewController {
                             {
                                 if(myDictionary["success"] as! Int == 1){
                                     /*DispatchQueue.main.async {
-                                        let user = User(firstname: myDictionary["firstName"] as! String, lastname: myDictionary["lastName"] as! String, userId: myDictionary["userId"] as! Int, username: myDictionary["username"] as! String, roleId: myDictionary["roleId"] as! Int, companyId: myDictionary["CompanyId"] as! Int)
-                                        //Writing custom object to NSDefaults
-                                        var userDefaults = UserDefaults.standard
-                                        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: user)
-                                        userDefaults.set(encodedData, forKey: "user")
-                                        userDefaults.synchronize()
-                                    }*/
+                                     let user = User(firstname: myDictionary["firstName"] as! String, lastname: myDictionary["lastName"] as! String, userId: myDictionary["userId"] as! Int, username: myDictionary["username"] as! String, roleId: myDictionary["roleId"] as! Int, companyId: myDictionary["CompanyId"] as! Int)
+                                     //Writing custom object to NSDefaults
+                                     var userDefaults = UserDefaults.standard
+                                     let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: user)
+                                     userDefaults.set(encodedData, forKey: "user")
+                                     userDefaults.synchronize()
+                                     }*/
                                     let preferences = UserDefaults.standard
                                     let companyId = myDictionary["CompanyId"]
                                     let companyIdKey = "CompanyId"
@@ -100,28 +100,28 @@ class LoginViewController: UIViewController {
                                     preferences.set(firstname, forKey: firstnameKey)
                                     preferences.set(lastname, forKey: lastnameKey)
                                     preferences.synchronize()
-                                switch((myDictionary["roleId"] as! NSString).intValue)
-                                {
-                                case 10://Manager
-                                    //Updating UI on a thread other than the main thread is a common mistake that can result in missed UI updates, visual defects, data corruptions, and crashes.
-                                    //tasks such as networking are often executed in the background, and provide a completion handler to signal completion. Attempting to read or update the UI from a completion handler may cause problems.
-                                    //Dispatch the call to update the UI.
-                                    DispatchQueue.main.async {
-                                        
-                                        self.performSegue(withIdentifier: "toManagerViewController", sender: nil)
+                                    switch((myDictionary["roleId"] as! NSString).intValue)
+                                    {
+                                    case 10://Manager
+                                        //Updating UI on a thread other than the main thread is a common mistake that can result in missed UI updates, visual defects, data corruptions, and crashes.
+                                        //tasks such as networking are often executed in the background, and provide a completion handler to signal completion. Attempting to read or update the UI from a completion handler may cause problems.
+                                        //Dispatch the call to update the UI.
+                                        DispatchQueue.main.async {
+                                            
+                                            self.performSegue(withIdentifier: "toManagerViewController", sender: nil)
+                                        }
+                                        break;
+                                    case 11://Client
+                                        break;
+                                    case 12://Employee
+                                        DispatchQueue.main.async {
+                                            self.present(employeeViewController, animated: true, completion: nil)
+                                        }
+                                        break;
+                                    default:
+                                        break;
                                     }
-                                    break;
-                                case 11://Client
-                                    break;
-                                case 12://Employee
-                                    DispatchQueue.main.async {
-                                        self.present(employeeViewController, animated: true, completion: nil)
-                                    }
-                                    break;
-                                default:
-                                    break;
                                 }
-                            }
                                 else{
                                     DispatchQueue.main.async {
                                         self.lblError.text="Username password combination incorrect"
@@ -148,7 +148,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -162,15 +162,15 @@ class LoginViewController: UIViewController {
         tfPassword.text="";
         tfUsername.text="";
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

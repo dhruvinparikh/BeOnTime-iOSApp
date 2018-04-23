@@ -15,13 +15,13 @@
 		917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B520868BF4008E6CA7 /* LoginViewController.swift */; };
 		917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */; };
 		917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327B92086902E008E6CA7 /* ManagerViewController.swift */; };
-		917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */; };
 		91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C01C86207CE19000162F42 /* AppDelegate.swift */; };
 		91C01C8C207CE19000162F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8A207CE19000162F42 /* Main.storyboard */; };
 		91C01C8E207CE19000162F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8D207CE19000162F42 /* Assets.xcassets */; };
 		91C01C91207CE19000162F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */; };
 		91FED887208D407400CE4718 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FED886208D407400CE4718 /* Employee.swift */; };
-		91FED889208D4BC800CE4718 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FED888208D4BC800CE4718 /* EmployeeTableViewCell.swift */; };
+		91FED88D208D6AA100CE4718 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */; };
+		91FED8CB208D798200CE4718 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FED8CA208D798200CE4718 /* EmployeeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		917327B520868BF4008E6CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmloyeeViewController.swift; sourceTree = "<group>"; };
 		917327B92086902E008E6CA7 /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
-		917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewTableViewController.swift; sourceTree = "<group>"; };
 		91C01C83207CE19000162F42 /* BeOnTime-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeOnTime-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C01C86207CE19000162F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C01C8B207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,7 +54,8 @@
 		91C01C90207CE19000162F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C01C92207CE19000162F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FED886208D407400CE4718 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
-		91FED888208D4BC800CE4718 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
+		91FED8CA208D798200CE4718 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +113,7 @@
 		91C01C7A207CE19000162F42 = {
 			isa = PBXGroup;
 			children = (
+				91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */,
 				91C01C85207CE19000162F42 /* BeOnTime-iOSApp */,
 				91C01C84207CE19000162F42 /* Products */,
 				913B5A3B207EAA7B006DCBFD /* Frameworks */,
@@ -134,14 +135,13 @@
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
-				91FED888208D4BC800CE4718 /* EmployeeTableViewCell.swift */,
+				91FED8CA208D798200CE4718 /* EmployeeTableViewCell.swift */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
 				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
 				91C01C92207CE19000162F42 /* Info.plist */,
 				917327B520868BF4008E6CA7 /* LoginViewController.swift */,
 				917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */,
 				917327B92086902E008E6CA7 /* ManagerViewController.swift */,
-				917327BD2086907F008E6CA7 /* EmployeeViewTableViewController.swift */,
 			);
 			path = "BeOnTime-iOSApp";
 			sourceTree = "<group>";
@@ -221,12 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				917327BE2086907F008E6CA7 /* EmployeeViewTableViewController.swift in Sources */,
 				91FED887208D407400CE4718 /* Employee.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
 				914C67BD208AF013006078D6 /* Login.swift in Sources */,
-				91FED889208D4BC800CE4718 /* EmployeeTableViewCell.swift in Sources */,
+				91FED88D208D6AA100CE4718 /* EmployeeListViewController.swift in Sources */,
+				91FED8CB208D798200CE4718 /* EmployeeTableViewCell.swift in Sources */,
 				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
 				91C01C87207CE19000162F42 /* AppDelegate.swift in Sources */,
 				914C67BF208AF3A0006078D6 /* User.swift in Sources */,
