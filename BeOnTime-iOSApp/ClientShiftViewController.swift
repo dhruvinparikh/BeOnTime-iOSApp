@@ -39,8 +39,9 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
         //Reading preferences
         
         let preferences = UserDefaults.standard
-        
-        
+        self.clientShifts = [ClientShift]()
+        self.clientShiftView.delegate = nil
+        self.clientShiftView.dataSource = nil
         
         let companyIdKey = "CompanyId"
         
