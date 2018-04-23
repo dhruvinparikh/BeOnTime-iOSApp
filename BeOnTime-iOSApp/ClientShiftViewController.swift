@@ -9,21 +9,25 @@
 import UIKit
 
 
-
+var clientShifts = [ClientShift]()
+var myIndex = 0
 class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var clientShiftView: UITableView!
-    var clientShifts = [ClientShift]()
+    
     @IBAction func btnLogout(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.present(loginViewController, animated: true, completion: nil)
     }
+    
+    //method to get count of cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.clientShifts.count
+        return clientShifts.count
     }
     
+    //method to insert details to cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "clientSiftCell", for: indexPath) as! ClientShiftTableViewCell
         
@@ -35,11 +39,21 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
         
         return cell
     }
+    
+    //Method for selct a cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Setting myindex to the row number
+        myIndex = indexPath.row
+        //Performing Segue
+        performSegue(withIdentifier: "toClientShiftDetail", sender: self)
+    }
+    
+    
     @IBAction func btnSearch(_ sender: UIButton) {
         //Reading preferences
         
         let preferences = UserDefaults.standard
-        self.clientShifts = [ClientShift]()
+        clientShifts = [ClientShift]()
         self.clientShiftView.delegate = nil
         self.clientShiftView.dataSource = nil
         
@@ -157,7 +171,7 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
                                                 shift.empDesignationName = clientShift["empDesignationName"] as? String
                                                 shift.payPerHour = clientShift["payPerHour"] as? String
                                                 
-                                                self.clientShifts.append(shift)
+                                                clientShifts.append(shift)
                                                 
                                             }
                                             

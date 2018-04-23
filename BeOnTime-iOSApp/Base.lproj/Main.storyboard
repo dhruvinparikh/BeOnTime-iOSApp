@@ -324,7 +324,7 @@
                     <navigationItem key="navigationItem" id="kdM-m7-3kL"/>
                     <connections>
                         <outlet property="clientShiftView" destination="Xwd-ef-HiK" id="6xn-q3-ZfA"/>
-                        <segue destination="NYe-T2-3v5" kind="show" id="TPw-fO-6sO"/>
+                        <segue destination="NYe-T2-3v5" kind="show" identifier="toClientShiftDetail" id="TPw-fO-6sO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Bi-tM-nhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
