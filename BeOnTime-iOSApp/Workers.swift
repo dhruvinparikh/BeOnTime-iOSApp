@@ -10,8 +10,6 @@ import UIKit
 
 class Workers {
     
-    var startDate:String
-    var endDate:String
     var workerName:String
     var clientCompany:String
     var workLocation:String
@@ -20,10 +18,8 @@ class Workers {
     var shiftStatus:String
     
     //Constructor
-    init(startDate:String, endDate:String, workerName:String, clientCompany:String, workLocation:String, jobTitle:String, workShift:String, shiftStatus:String) {
-        
-        self.startDate = startDate
-        self.endDate = endDate
+    init( workerName:String, clientCompany:String, workLocation:String, jobTitle:String, workShift:String, shiftStatus:String) {
+
         self.workerName = workerName
         self.clientCompany = clientCompany
         self.workLocation = workLocation

@@ -34,35 +34,43 @@ class DetailsViewController: UIViewController {
         
     
     @IBAction func btnSave(_ sender: Any) {
-        let url = NSURL(string: "") // our database server string goes here...
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //create object of the intented view controller to be diplayed
+        _ = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         
-        var request = URLRequest(url: (url! as NSURL) as URL)
+        let headers = [
+            "Cookie": "; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Cache-Control": "no-cache",
+            "Postman-Token": "20674dea-bdb8-4438-9832-e9b115b3743d"
+        ]
+        
+       // let url = NSURL(string: "") // our database server string goes here...
+    
+        let dateFormatter = DateFormatter()
+        var date:Date?
+        
+        _ = Workers(workerName: lblWorkerName.text!, clientCompany: lblClientCompany.text!, workLocation: lblWorkLocation.text!, jobTitle: lblJobTitle.text!, workShift: lblWorkShift.text!, shiftStatus: lblShiftStatus.text!)
+        let postData = NSMutableData(data: "operation=getClientShiftDetails".data(using: String.Encoding.utf16)!)
+        
+        let StartDate = "&StartDate" + dateFormatter.string(from: date!)
+        let EndDate = "&EndDate" + dateFormatter.string(from: date!)
+        
+        postData.append(StartDate.data(using: String.Encoding.utf16)!)
+        postData.append(EndDate.data(using:String.Encoding.utf16)!)
+       // postData.append(workers.data(using:String.Encoding,UTF16)!)
+        
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://beontime.byethost16.com/android_project/zf_android_request.php?i=1")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 15.0)
         request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+     
         
-        var dataString = "secretWord=44fdcv8jf3" // starting POST string with a secretWord
-        
-        // the POST string has entries separated by &
-        
-        dataString = dataString + "&item1=\(lblWorkerName.text!)" // add items as name and value
-        dataString = dataString + "&item2=\(lblClientCompany.text!)"
-        dataString = dataString + "&item3=\(lblWorkLocation.text!)"
-        dataString = dataString + "&item4=\(lblJobTitle.text!)"
-        dataString = dataString + "&item5=\(lblWorkShift.text!)"
-        dataString = dataString + "&item4=\(lblShiftStatus.text!)"
-        dataString = dataString + "&item5=\(textViewRemark.text!)"
-        
-        // convert the post string to utf8 format
-        
-        let dataD = dataString.data(using: .utf8) // convert to utf8 string
-        
-        do
-        {
-            
-            // the upload task, uploadJob, is defined here
-            
-            let uploadJob = URLSession.shared.uploadTask(with: request, from: dataD)
-            {
-                data, response, error in
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
                 
                 if error != nil {
                     
@@ -70,48 +78,61 @@ class DetailsViewController: UIViewController {
                     
                     DispatchQueue.main.async
                         {
-                            let alert = UIAlertController(title: "Save Didn't Work?", message: "Looks like the connection to the server didn't work.  Do you have Internet access?", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Save Didn't Work?", message: "Looks like the connection to the server didn't work.  Do you have the necessary connection?", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                     }
                 }
                 else
                 {
-                    if let unwrappedData = data {
-                        
-                        let returnedData = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue) // Response from web server hosting the database
-                        
-                        if returnedData == "1" // insert into database worked
-                        {
-                            
-                            // display an alert if no error and database insert worked (return = 1) inside the DispatchQueue.main.async
-                            
-                            DispatchQueue.main.async
+                    let httpResponse = response as? HTTPURLResponse
+                    print(httpResponse ?? "No Response")
+                    if let data = data {
+                        print(data)
+                        do {
+                            let json = try JSONSerialization.jsonObject(with: data, options: [])
+                            print(json)
+                            /***/
+                            var dictonary:NSDictionary?
+                            do {
+                                dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as! NSDictionary
+                                
+                                if let myDictionary = dictonary
                                 {
-                                    let alert = UIAlertController(title: "Save OK?", message: "Looks like the upload and insert into the database worked.", preferredStyle: .alert)
-                                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                                    self.present(alert, animated: true, completion: nil)
+                                    if(myDictionary["success"] as! Int == 1){
+                                        let preferences = UserDefaults.standard
+                                        let companyId = myDictionary["CompanyId"]
+                                        let companyIdKey = "CompanyId"
+                                        let shiftId = myDictionary["ShiftId"]
+                                        let shiftIdKey = "shiftId"
+                                        preferences.set(companyId, forKey: companyIdKey)
+                                        preferences.set(shiftId, forKey: shiftIdKey)
+                                        preferences.synchronize()
+                                    }
+                                    else{
+                                        DispatchQueue.main.async {
+                                            
+                                            let alert = UIAlertController(title: "Save Didn't Work", message: "Looks like the insert into the database did not work properly...", preferredStyle: .alert)
+                                            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                                            self.present(alert, animated: true, completion: nil)
+                                        }
+                                    }
+                                }
+                                
+                            } catch let error as NSError {
+                                print(error)
                             }
                         }
-                        else
-                        {
-                            // display an alert if an error and database insert didn't worked (return != 1) inside the DispatchQueue.main.async
-                            
-                            DispatchQueue.main.async
-                                {
-                                    
-                                    let alert = UIAlertController(title: "Save Didn't Work", message: "Looks like the insert into the database did not worked.", preferredStyle: .alert)
-                                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                                    self.present(alert, animated: true, completion: nil)
-                            }
+                        catch {
+                            print(error)
                         }
+                        
                     }
-                }
-            }
-            uploadJob.resume()
-        }
+                    
+            }})
+        
+        dataTask.resume()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -120,8 +141,13 @@ class DetailsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        clear();
     }
+    
+    func clear(){
+        self.clear()
+    }
+    
     
 
     /*
@@ -135,3 +161,4 @@ class DetailsViewController: UIViewController {
     */
 
 }
+

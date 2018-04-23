@@ -6,7 +6,7 @@
 //  Copyright © 2018 Parikh Dhruvin S. All rights reserved.
 //
 
-var workers = [Workers(startDate: "11.11.2013", endDate: "11.11.2015",workerName:"Emre Ozel", clientCompany: "Humber",  workLocation: "Toronto",jobTitle:"Programmer", workShift:"2", shiftStatus:"Active" )]
+var workers = [Workers(workerName:"Emre Ozel", clientCompany: "Humber",  workLocation: "Toronto",jobTitle:"Programmer", workShift:"2", shiftStatus:"Active" )]
 
 var myIndex = 0
 
@@ -22,9 +22,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseCell")! as! TableViewCell
         let worker = workers[indexPath.row]
-        cell.datePickerStartDate(worker.startDate)
+     //   cell.datePickerStartDate(worker.startDate)
         
-        cell.datepickerEndDate(worker.endDate)
+      //  cell.datepickerEndDate(worker.endDate)
         return cell
     }
   

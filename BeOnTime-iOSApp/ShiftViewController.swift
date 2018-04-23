@@ -8,9 +8,43 @@
 
 import UIKit
 
-class ShiftViewController: UIViewController {
+class ShiftViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource  {
 
+    var workers = [Workers(workerName:"Emre Ozel", clientCompany: "Humber",  workLocation: "Toronto",jobTitle:"Programmer", workShift:"2", shiftStatus:"Active" )]
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return workers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+       let cell1 = tableView.dequeueReusableCell(withIdentifier: "cell1")
+        let cell2 = tableView.dequeueReusableCell(withIdentifier: "cell2")
+
+      // cell.textLabel?.text = workers[indexPath.row]
+        
+        return cell
+        return cell1!
+        return cell2!
+        
+      //  let worker = workers[indexPath.row]
+      //  cell.lblName.text = worker.movieTitle
+       // cell.lblYear.text = worker.year
+       // cell.myImage.image = UIImage(named: movie.imageAddress)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Setting myindex to the row number
+        myIndex = indexPath.row
+        //Performing Segue
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+    
+ 
     @IBOutlet weak var PickerStart: UIDatePicker!
     @IBOutlet weak var PickerEnd: UIDatePicker!
     @IBOutlet weak var lblCheck: UILabel!
@@ -33,7 +67,7 @@ class ShiftViewController: UIViewController {
         //dateFormatter.timeStyle = DateFormatter.Style.short
         
       //  let strDate = dateFormatter.string(from: datePicker.date)
-        var shift = Shift(StartDate: PickerStart.date, EndDate: PickerEnd.date)
+        _ = Shift(StartDate: PickerStart.date, EndDate: PickerEnd.date)
          let postData = NSMutableData(data: "operation=getClientShifts".data(using: String.Encoding.utf16)!)
         let postData1 = NSMutableData(data: "operation= filterShifts".data(using: String.Encoding.utf16)!)
 
@@ -101,9 +135,14 @@ class ShiftViewController: UIViewController {
                     
                 }
                 
+                
+                
             }})
         
         dataTask.resume()
+        
+    
+        
     }
     
     override func viewDidLoad() {
