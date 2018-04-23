@@ -281,7 +281,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseEmployeeCell" rowHeight="118" id="nCV-4i-mFC" customClass="EmployeeTableViewCell" customModule="BeOnTime_iOSApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nCV-4i-mFC" id="8x7-X2-deD">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nCV-4i-mFC" id="8x7-X2-deD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="117.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -297,10 +297,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGR-iH-tOw">
-                                                    <rect key="frame" x="15" y="76" width="290" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGR-iH-tOw">
+                                                    <rect key="frame" x="15" y="69" width="290" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -308,11 +307,15 @@
                                             <constraints>
                                                 <constraint firstItem="a1U-sw-RvI" firstAttribute="top" secondItem="8x7-X2-deD" secondAttribute="topMargin" id="5ma-EB-0jR"/>
                                                 <constraint firstItem="Vx9-Gi-koz" firstAttribute="top" secondItem="a1U-sw-RvI" secondAttribute="bottom" constant="8" id="643-hz-8pu"/>
+                                                <constraint firstItem="cGR-iH-tOw" firstAttribute="top" secondItem="Vx9-Gi-koz" secondAttribute="bottom" constant="15" id="AgE-wE-1eC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cGR-iH-tOw" secondAttribute="bottom" constant="10" id="Bs3-YX-Mqe"/>
                                                 <constraint firstItem="a1U-sw-RvI" firstAttribute="trailing" secondItem="8x7-X2-deD" secondAttribute="trailingMargin" id="Gop-T3-xs2"/>
                                                 <constraint firstItem="Vx9-Gi-koz" firstAttribute="trailing" secondItem="8x7-X2-deD" secondAttribute="trailingMargin" id="Sth-47-Wud"/>
                                                 <constraint firstItem="a1U-sw-RvI" firstAttribute="leading" secondItem="8x7-X2-deD" secondAttribute="leadingMargin" id="ZPT-iX-qqq"/>
                                                 <constraint firstItem="Vx9-Gi-koz" firstAttribute="leading" secondItem="8x7-X2-deD" secondAttribute="leadingMargin" id="lzB-jl-M5j"/>
+                                                <constraint firstItem="cGR-iH-tOw" firstAttribute="leading" secondItem="8x7-X2-deD" secondAttribute="leadingMargin" id="u1v-dn-O0D"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Vx9-Gi-koz" secondAttribute="bottom" constant="23" id="ubt-Jd-Ytp"/>
+                                                <constraint firstItem="cGR-iH-tOw" firstAttribute="trailing" secondItem="8x7-X2-deD" secondAttribute="trailingMargin" id="yjN-Z4-24z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
