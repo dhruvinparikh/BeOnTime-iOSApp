@@ -2,7 +2,7 @@
 //  EmployeeTableViewCell.swift
 //  BeOnTime-iOSApp
 //
-//  Created by Kamlesh Shah on 2018-04-22.
+//  Created by Parikh Dhruvin S. on 2018-04-22.
 //  Copyright © 2018 Parikh Dhruvin S. All rights reserved.
 //
 
