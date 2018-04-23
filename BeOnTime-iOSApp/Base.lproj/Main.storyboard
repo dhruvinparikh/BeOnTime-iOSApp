@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,28 +278,42 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseEmployeeCell" rowHeight="93" id="nCV-4i-mFC" customClass="EmployeeTableViewCell" customModule="BeOnTime_iOSApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseEmployeeCell" rowHeight="141" id="nCV-4i-mFC" customClass="EmployeeTableViewCell" customModule="BeOnTime_iOSApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nCV-4i-mFC" id="8x7-X2-deD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-sw-RvI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-sw-RvI">
                                                     <rect key="frame" x="15" y="11" width="290" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx9-Gi-koz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx9-Gi-koz">
                                                     <rect key="frame" x="15" y="40" width="290" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Address" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNa-gR-eiM">
+                                                    <rect key="frame" x="15" y="69" width="290" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vx9-Gi-koz" firstAttribute="top" secondItem="a1U-sw-RvI" secondAttribute="bottom" constant="8" id="4dL-Fj-vef"/>
+                                                <constraint firstItem="Vx9-Gi-koz" firstAttribute="leading" secondItem="8x7-X2-deD" secondAttribute="leadingMargin" id="Qnp-u6-CLt"/>
+                                                <constraint firstItem="a1U-sw-RvI" firstAttribute="trailing" secondItem="8x7-X2-deD" secondAttribute="trailingMargin" id="Xo1-uC-TvP"/>
+                                                <constraint firstItem="a1U-sw-RvI" firstAttribute="leading" secondItem="8x7-X2-deD" secondAttribute="leadingMargin" id="dgE-l0-pYi"/>
+                                                <constraint firstItem="Vx9-Gi-koz" firstAttribute="top" secondItem="a1U-sw-RvI" secondAttribute="bottom" constant="8" id="ffU-Ne-ugK"/>
+                                                <constraint firstItem="a1U-sw-RvI" firstAttribute="top" secondItem="8x7-X2-deD" secondAttribute="topMargin" id="jse-n1-VJ1"/>
+                                                <constraint firstItem="pNa-gR-eiM" firstAttribute="top" secondItem="Vx9-Gi-koz" secondAttribute="bottom" constant="8" id="pKB-Mw-9vr"/>
+                                                <constraint firstItem="Vx9-Gi-koz" firstAttribute="trailing" secondItem="8x7-X2-deD" secondAttribute="trailingMargin" id="pf0-s6-Us2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblEmail" destination="Vx9-Gi-koz" id="Eqx-jp-wlu"/>

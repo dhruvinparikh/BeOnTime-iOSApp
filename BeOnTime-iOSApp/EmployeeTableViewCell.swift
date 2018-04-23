@@ -10,6 +10,7 @@ import UIKit
 
 class EmployeeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblName: UILabel!
     override func awakeFromNib() {

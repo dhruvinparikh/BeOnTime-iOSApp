@@ -19,14 +19,10 @@ class EmployeeListViewController: UIViewController,UITableViewDelegate, UITableV
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        // defining a table view cell
-        /*var cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseEmployeeCell")
-        cell.textLabel?.text = "Dhruvin"
-        return (cell)*/
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseEmployeeCell", for: indexPath) as! EmployeeTableViewCell
-        cell.lblName.text = employees[indexPath.row].firstName! + " " + employees[indexPath.row].lastName!
+        cell.lblName.text = employees[indexPath.row].firstName! + " " + employees[indexPath.row].lastName! + ", " + employees[indexPath.row].employeeId!
         cell.lblEmail.text = employees[indexPath.row].email!
+        cell.lblAddress.text = employees[indexPath.row].address! + "," + employees[indexPath.row].city! + "-" + employees[indexPath.row].postalCode! + ", "+employees[indexPath.row].province!+"."
         return cell
     }
     
@@ -137,7 +133,7 @@ class EmployeeListViewController: UIViewController,UITableViewDelegate, UITableV
                                             
                                             if let employee = employeelist as? [String: Any]{
                                                 
-                                                //print(employee["firstName"])
+                                                print(employee["firstName"])
                                                 
                                                 let emp = Employee()
                                                 
@@ -145,7 +141,7 @@ class EmployeeListViewController: UIViewController,UITableViewDelegate, UITableV
                                                 
                                                 emp.lastName = employee["lastName"] as? String
                                                 
-                                                emp.employeeId = employee["employeeId"] as? Int
+                                                emp.employeeId = employee["employeeId"] as? String
                                                 
                                                 emp.email = employee["email"] as? String
                                                 
