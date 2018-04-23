@@ -12,6 +12,7 @@
 		0EA010DE208E849F004FC621 /* ClientShiftDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */; };
 		0EA010E0208E8772004FC621 /* ClientShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010DF208E8772004FC621 /* ClientShift.swift */; };
 		0EA010E2208E8AB4004FC621 /* ClientShiftDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010E1208E8AB4004FC621 /* ClientShiftDetail.swift */; };
+		0EB04BF2208E968C00495051 /* ClientShiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */; };
 		913B5A30207E99F4006DCBFD /* beontime_logo_225x225.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */; };
 		913B5A31207E99F4006DCBFD /* beontime_logo_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */; };
 		913B5A32207E99F4006DCBFD /* beontime_logo_639x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */; };
@@ -35,6 +36,7 @@
 		0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftDetailsViewController.swift; sourceTree = "<group>"; };
 		0EA010DF208E8772004FC621 /* ClientShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShift.swift; sourceTree = "<group>"; };
 		0EA010E1208E8AB4004FC621 /* ClientShiftDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftDetail.swift; sourceTree = "<group>"; };
+		0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftTableViewCell.swift; sourceTree = "<group>"; };
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
@@ -126,9 +128,6 @@
 		91C01C7A207CE19000162F42 = {
 			isa = PBXGroup;
 			children = (
-				0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */,
-				0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */,
-				91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */,
 				91C01C85207CE19000162F42 /* BeOnTime-iOSApp */,
 				91C01C84207CE19000162F42 /* Products */,
 				913B5A3B207EAA7B006DCBFD /* Frameworks */,
@@ -146,10 +145,14 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */,
+				0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */,
+				91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */,
 				914C67BB208AEFE4006078D6 /* Model */,
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
+				0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */,
 				91FED8CA208D798200CE4718 /* EmployeeTableViewCell.swift */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
 				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
 				914C67BD208AF013006078D6 /* Login.swift in Sources */,
 				91FED88D208D6AA100CE4718 /* EmployeeListViewController.swift in Sources */,
+				0EB04BF2208E968C00495051 /* ClientShiftTableViewCell.swift in Sources */,
 				91FED8CB208D798200CE4718 /* EmployeeTableViewCell.swift in Sources */,
 				917327B820868FF5008E6CA7 /* EmloyeeViewController.swift in Sources */,
 				0EA010E2208E8AB4004FC621 /* ClientShiftDetail.swift in Sources */,

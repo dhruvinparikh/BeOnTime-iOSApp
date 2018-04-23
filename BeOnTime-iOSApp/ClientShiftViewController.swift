@@ -8,16 +8,33 @@
 
 import UIKit
 
-let clientShifts = [ClientShift]()
 
-class ClientShiftViewController: UIViewController {
 
+class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var clientShiftView: UITableView!
+    var clientShifts = [ClientShift]()
     @IBAction func btnLogout(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.present(loginViewController, animated: true, completion: nil)
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.clientShifts.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "clientSiftCell", for: indexPath) as! ClientShiftTableViewCell
+        
+        //Configure cell
+        
+        cell.lblName.text = clientShifts[indexPath.row].CompanyName
+        cell.lblStartTime.text = clientShifts[indexPath.row].ShiftStartTime
+        cell.lblEndTime.text = clientShifts[indexPath.row].ShiftEndTime
+        
+        return cell
+    }
     @IBAction func btnSearch(_ sender: UIButton) {
         //Reading preferences
         
@@ -116,7 +133,7 @@ class ClientShiftViewController: UIViewController {
                                         
                                         for clientShiftList in (clientShiftArray as? NSArray)!{
                                             
-                                            //print(clientShiftList)
+                                            print(clientShiftList)
                                             
                                             if let clientShift = clientShiftList as? [String: Any]{
                                                 
@@ -125,39 +142,32 @@ class ClientShiftViewController: UIViewController {
                                                 
                                                 let shift = ClientShift()
                                                 
-                                                shift.Address = clientShift[""] as? String
-                                                shift.City=clientShift[""] as? String
+                                                shift.Address = clientShift["Address"] as? String
+                                                shift.City = clientShift["City"] as? String
+                                                shift.CompanyName = clientShift["CompanyName"] as? String
+                                                shift.FirstName = clientShift["FirstName"] as? String
+                                                shift.LastName = clientShift["LastName"] as? String
+                                                shift.PostalCode = clientShift["PostalCode"] as? String
+                                                shift.ShiftEndTime = clientShift["ShiftEndTime"] as? String
+                                                shift.ShiftId = clientShift["ShiftId"] as? String
+                                                shift.ShiftStartTime = clientShift["ShiftStartTime"] as? String
+                                                shift.ShiftStatus = clientShift["ShiftStatus"] as? String
+                                                shift.UserName = clientShift["UserName"] as? String
+                                                shift.empDesignationName = clientShift["empDesignationName"] as? String
+                                                shift.payPerHour = clientShift["payPerHour"] as? String
                                                 
-                                                /*let emp = Employee()
-                                                
-                                                emp.firstName = employee["firstName"] as? String
-                                                
-                                                emp.lastName = employee["lastName"] as? String
-                                                
-                                                emp.employeeId = employee["employeeId"] as? String
-                                                
-                                                emp.email = employee["email"] as? String
-                                                
-                                                emp.address = employee["address"] as? String
-                                                
-                                                emp.city = employee["city"] as? String
-                                                
-                                                emp.province = employee["province"] as? String
-                                                
-                                                emp.postalCode = employee["postalCode"] as? String
-                                                
-                                                self.employees.append(emp)*/
+                                                self.clientShifts.append(shift)
                                                 
                                             }
                                             
                                         }
                                         
                                     }
-                                    /*DispatchQueue.main.async {
-                                        self.employeeView.dataSource = self
-                                        self.employeeView.delegate = self
-                                        self.employeeView.reloadData()
-                                    } */}
+                                    DispatchQueue.main.async {
+                                        self.clientShiftView.dataSource = self
+                                        self.clientShiftView.delegate = self
+                                        self.clientShiftView.reloadData()
+                                    } }
                                 
                             }
                             
@@ -191,24 +201,26 @@ class ClientShiftViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.clientShiftView.dataSource = nil
+        self.clientShiftView.delegate=nil
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
