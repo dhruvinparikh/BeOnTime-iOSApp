@@ -1,5 +1,5 @@
 //
-//  ClientShiftViewController.swift
+//  ClientShiftDetailsViewController.swift
 //  BeOnTime-iOSApp
 //
 //  Created by Ozel Emre on 4/23/18.
@@ -8,17 +8,8 @@
 
 import UIKit
 
-class ClientShiftViewController: UIViewController {
+class ClientShiftDetailsViewController: UIViewController {
 
-    @IBAction func btnLogout(_ sender: UIButton) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        self.present(loginViewController, animated: true, completion: nil)
-    }
-    
-    @IBAction func btnSearch(_ sender: UIButton) {
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
