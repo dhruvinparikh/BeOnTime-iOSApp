@@ -96,9 +96,12 @@ class LoginViewController: UIViewController {
                                     let firstnameKey = "firstname"
                                     let lastname = myDictionary["lastName"]
                                     let lastnameKey = "lastname"
+                                    let userid = myDictionary["userId"]
+                                    let useridKey = "userid"
                                     preferences.set(companyId, forKey: companyIdKey)
                                     preferences.set(firstname, forKey: firstnameKey)
                                     preferences.set(lastname, forKey: lastnameKey)
+                                    preferences.set(userid, forKey: useridKey)
                                     preferences.synchronize()
                                     switch((myDictionary["roleId"] as! NSString).intValue)
                                     {
