@@ -35,15 +35,14 @@ class ManagerViewController: UIViewController {
         
         //--Setting mapview properties-------
         // define location to show in the map
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(43.702194, -79.569515)
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(43.6762, -79.3860999)
         // defining area spanned by region
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1,0.1)
         // define region
         let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         // set the region
         mapView.setRegion(region, animated:true)
-        // Annotation
-        var arrAnnotation = [MKPointAnnotation]()
+        
         //-x-x-x-x-x-x-//
         
         //Creating a post request

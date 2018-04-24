@@ -10,7 +10,7 @@ import UIKit
 //update cookie here from http://www.beontime.byethost16.com/android_project/getcookie.php?i=1
 
 
-var BYETHOST_COOKIE_KEY = "e0425930eb12c3a457bd60eed3dd5126";
+var BYETHOST_COOKIE_KEY = "45cc29bd21a90c7a9985c0f6a4398b7f";
 class LoginViewController: UIViewController {
     
     //Object created for username text field on login

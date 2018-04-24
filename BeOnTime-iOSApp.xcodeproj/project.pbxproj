@@ -50,19 +50,6 @@
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
-		913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		913B5A3D207EAA7B006DCBFD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		913B5A3E207EAA7B006DCBFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		913B5A3F207EAA7B006DCBFD /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
-		913B5A40207EAA7B006DCBFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		913B5A41207EAA7B006DCBFD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		913B5A42207EAA7B006DCBFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		913B5A43207EAA7B006DCBFD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		913B5A44207EAA7B006DCBFD /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		913B5A45207EAA7B006DCBFD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		913B5A46207EAA7B006DCBFD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		913B5A48207EAA7B006DCBFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		914C67BC208AF013006078D6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		914C67BE208AF3A0006078D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		917327B520868BF4008E6CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +109,15 @@
 			path = CellViewController;
 			sourceTree = "<group>";
 		};
+		9134F608208F5577005754A4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
+				91C01C8A207CE19000162F42 /* Main.storyboard */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		913B5A2C207E99F4006DCBFD /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,26 +126,6 @@
 				913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */,
 			);
 			path = images;
-			sourceTree = "<group>";
-		};
-		913B5A3B207EAA7B006DCBFD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				913B5A44207EAA7B006DCBFD /* Accelerate.framework */,
-				913B5A48207EAA7B006DCBFD /* CoreData.framework */,
-				913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */,
-				913B5A45207EAA7B006DCBFD /* CoreImage.framework */,
-				913B5A3E207EAA7B006DCBFD /* CoreLocation.framework */,
-				913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */,
-				913B5A46207EAA7B006DCBFD /* CoreText.framework */,
-				913B5A41207EAA7B006DCBFD /* GLKit.framework */,
-				913B5A43207EAA7B006DCBFD /* ImageIO.framework */,
-				913B5A3F207EAA7B006DCBFD /* libc++.1.tbd */,
-				913B5A3D207EAA7B006DCBFD /* libz.tbd */,
-				913B5A42207EAA7B006DCBFD /* SystemConfiguration.framework */,
-				913B5A40207EAA7B006DCBFD /* UIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		914C67BB208AEFE4006078D6 /* Model */ = {
@@ -172,7 +148,6 @@
 			children = (
 				91C01C85207CE19000162F42 /* BeOnTime-iOSApp */,
 				91C01C84207CE19000162F42 /* Products */,
-				913B5A3B207EAA7B006DCBFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,15 +162,14 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				9134F608208F5577005754A4 /* Scene */,
 				0EB04BF5208EB8DC00495051 /* CellViewController */,
 				0EB04BF3208EB88600495051 /* ViewController */,
 				0EB04BF4208EB8AA00495051 /* TableViewController */,
 				914C67BB208AEFE4006078D6 /* Model */,
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
-				91C01C8A207CE19000162F42 /* Main.storyboard */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
-				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
 				91C01C92207CE19000162F42 /* Info.plist */,
 			);
 			path = "BeOnTime-iOSApp";
