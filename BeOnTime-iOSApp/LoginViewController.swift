@@ -123,8 +123,9 @@ class LoginViewController: UIViewController {
                                         break;
                                     case 12://Employee
                                         DispatchQueue.main.async {
-                                            self.present(employeeViewController, animated: true, completion: nil)
-                                        }
+                                            //self.present(employeeViewController, animated: true, completion: nil)
+                                            self.performSegue(withIdentifier: "toEmployeeNavigationController", sender: nil)
+                                            }
                                         break;
                                     default:
                                         break;
