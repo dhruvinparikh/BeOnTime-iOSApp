@@ -66,11 +66,8 @@
                         <outlet property="tfPassword" destination="SGN-hO-X3c" id="NwN-gg-Cnz"/>
                         <outlet property="tfUsername" destination="YNe-Iw-H50" id="YAU-tw-myH"/>
                         <segue destination="ECs-zb-TQm" kind="show" identifier="toManagerViewController" id="IJ7-DI-QN6"/>
-
                         <segue destination="Kx2-Qv-Jv1" kind="show" identifier="totest" id="yOi-w7-RFj"/>
-
                         <segue destination="bC3-I4-kND" kind="show" identifier="toEmployeeNavigationController" id="hKb-D8-SR2"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -183,6 +180,9 @@
                                 <state key="normal" title="SEARCH SHIFTS">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSearchShift:" destination="bJy-uM-POo" eventType="touchUpInside" id="lrt-lQ-npS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Shifts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-bZ-RL2">
                                 <rect key="frame" x="8" y="145" width="89" height="21"/>
@@ -467,7 +467,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdb-n2-feW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="1389" y="179"/>
         </scene>
         <!--Client Shift View Controller-->
@@ -719,9 +718,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOG-Ke-ovd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2276.25" y="880.9859154929577"/>
-
-            <point key="canvasLocation" x="1471.875" y="-652.81690140845069"/>
-
         </scene>
         <!--Manager View Controller-->
         <scene sceneID="cEy-Mi-ExE">

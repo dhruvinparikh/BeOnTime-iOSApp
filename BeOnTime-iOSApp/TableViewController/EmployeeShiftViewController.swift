@@ -28,10 +28,10 @@ class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITable
         return cell
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func btnSearchShift(_ sender: Any) {
         self.employeeShiftView.delegate=nil
         self.employeeShiftView.dataSource=nil
+        employeeShifts = [EmployeeShift]()
         // Do any additional setup after loading the view.
         
         //Reading preferences
@@ -190,6 +190,10 @@ class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITable
         
         
         dataTask.resume()
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
