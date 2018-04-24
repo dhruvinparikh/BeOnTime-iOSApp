@@ -74,12 +74,12 @@ class LoginViewController: UIViewController {
                 if let data = data {
                     print(data)
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: [])
+                        //let json = try JSONSerialization.jsonObject(with: data, options: [])
                         //print(json)
                         /***/
                         var dictonary:NSDictionary?
                         do {
-                            dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as! NSDictionary
+                            dictonary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
                             
                             if let myDictionary = dictonary
                             {
