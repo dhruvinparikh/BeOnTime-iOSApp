@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="2242.5" y="-653.87323943661977"/>
         </scene>
-        <!--View Controller-->
+        <!--Employee Shift Detail View Controller-->
         <scene sceneID="LIf-8K-voY">
             <objects>
-                <viewController id="aCc-ig-Yab" sceneMemberID="viewController">
+                <viewController id="aCc-ig-Yab" customClass="EmployeeShiftDetailViewController" customModule="BeOnTime_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iVJ-hz-xSL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,14 +240,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Work Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWT-hp-e9y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWT-hp-e9y">
                                 <rect key="frame" x="16" y="305" width="130" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Work Shift:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-Sp-31R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-Sp-31R">
                                 <rect key="frame" x="16" y="326" width="130" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -334,6 +334,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bYh-Qk-bXe"/>
                     </view>
+                    <connections>
+                        <outlet property="lblClientCompany" destination="YvV-bo-jIN" id="QtV-SR-PG4"/>
+                        <outlet property="lblJobTitle" destination="E8Y-U1-elN" id="7ik-9u-Lfz"/>
+                        <outlet property="lblShiftStatus" destination="uJm-Lb-H4v" id="qry-I4-YgZ"/>
+                        <outlet property="lblWorkDate" destination="Nh1-6K-lYS" id="vsm-vz-pBL"/>
+                        <outlet property="lblWorkLocation" destination="fol-xT-y9V" id="z5j-g5-mEF"/>
+                        <outlet property="lblWorkShift" destination="Ipr-rd-hqh" id="XFx-oJ-4J6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAM-3b-tcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -702,6 +710,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beontime_logo_639x165.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ggu-74-KNY">
+                                <rect key="frame" x="16" y="458" width="288" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ff0-zi-emv"/>

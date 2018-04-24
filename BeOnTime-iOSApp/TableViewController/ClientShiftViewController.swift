@@ -10,7 +10,8 @@ import UIKit
 
 
 var clientShifts = [ClientShift]()
-var myIndex = 0
+var clientIndex = 0
+
 class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     
@@ -43,7 +44,7 @@ class ClientShiftViewController: UIViewController,UITableViewDelegate, UITableVi
     //Method for selct a cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Setting myindex to the row number
-        myIndex = indexPath.row
+        clientIndex = indexPath.row
         //Performing Segue
         performSegue(withIdentifier: "toClientShiftDetail", sender: self)
     }

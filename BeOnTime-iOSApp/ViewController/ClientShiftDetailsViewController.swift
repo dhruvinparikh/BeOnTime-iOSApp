@@ -47,7 +47,7 @@ class ClientShiftDetailsViewController: UIViewController {
         let postData = NSMutableData(data: "operation=getClientShiftDetails".data(using: String.Encoding.utf8)!)
         
         let cid = "&companyId="+companyId!
-        let sid = "&shiftId="+clientShifts[myIndex].ShiftId!;
+        let sid = "&shiftId="+clientShifts[clientIndex].ShiftId!;
         postData.append(cid.data(using: String.Encoding.utf8)!)
         postData.append("&startDate=2018-01-22".data(using: String.Encoding.utf8)!)
         postData.append(sid.data(using: String.Encoding.utf8)!)

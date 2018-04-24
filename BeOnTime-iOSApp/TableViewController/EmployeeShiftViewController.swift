@@ -8,14 +8,16 @@
 
 import UIKit
 
+var employeeShifts = [EmployeeShift]()
+var shiftIndex = 0
+
 class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-    var employeeShifts = [EmployeeShift]()
-    var myIndex = 0
+    
     @IBOutlet var employeeShiftView: UITableView!
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return self.employeeShifts.count
+        return employeeShifts.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -24,14 +26,14 @@ class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITable
         cell.lblCompanyName.text = employeeShifts[indexPath.row].companyName!
         cell.lblStartDate.text = employeeShifts[indexPath.row].startDate!
         cell.lblEndDate.text = employeeShifts[indexPath.row].endDate!
-        print(employeeShifts[indexPath.row].shiftId)
+        //print(employeeShifts[indexPath.row].shiftId)
         return cell
     }
     
     //Method for selct a cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Setting myindex to the row number
-        myIndex = indexPath.row
+        shiftIndex = indexPath.row
         //Performing Segue
         performSegue(withIdentifier: "toEmployeeShiftDetail", sender: self)
     }
@@ -156,7 +158,7 @@ class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITable
                                                 
                                                 
                                                 
-                                                self.employeeShifts.append(shift)
+                                                employeeShifts.append(shift)
                                                 
                                             }
                                             
