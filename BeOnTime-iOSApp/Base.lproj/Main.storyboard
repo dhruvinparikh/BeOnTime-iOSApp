@@ -197,7 +197,7 @@
                     </view>
                     <connections>
                         <outlet property="employeeShiftView" destination="mTo-GR-Z0l" id="CfD-ax-a5W"/>
-                        <segue destination="aCc-ig-Yab" kind="show" id="bM8-Hz-ibx"/>
+                        <segue destination="aCc-ig-Yab" kind="show" identifier="toEmployeeShiftDetail" id="bM8-Hz-ibx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzh-YD-25L" userLabel="First Responder" sceneMemberID="firstResponder"/>

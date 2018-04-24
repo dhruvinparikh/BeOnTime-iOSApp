@@ -10,7 +10,7 @@ import UIKit
 
 class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var employeeShifts = [EmployeeShift]()
-    
+    var myIndex = 0
     @IBOutlet var employeeShiftView: UITableView!
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -26,6 +26,14 @@ class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITable
         cell.lblEndDate.text = employeeShifts[indexPath.row].endDate!
         print(employeeShifts[indexPath.row].shiftId)
         return cell
+    }
+    
+    //Method for selct a cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Setting myindex to the row number
+        myIndex = indexPath.row
+        //Performing Segue
+        performSegue(withIdentifier: "toEmployeeShiftDetail", sender: self)
     }
     
     @IBAction func btnSearchShift(_ sender: Any) {
