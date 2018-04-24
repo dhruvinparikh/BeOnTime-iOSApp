@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		0EA010D0208E761C004FC621 /* Workers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010CF208E761C004FC621 /* Workers.swift */; };
 		0EA010DC208E7F4C004FC621 /* ClientShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */; };
 		0EA010DE208E849F004FC621 /* ClientShiftDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */; };
 		0EA010E0208E8772004FC621 /* ClientShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010DF208E8772004FC621 /* ClientShift.swift */; };
 		0EA010E2208E8AB4004FC621 /* ClientShiftDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA010E1208E8AB4004FC621 /* ClientShiftDetail.swift */; };
 		0EB04BF2208E968C00495051 /* ClientShiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */; };
-
 		6E295B5F208E7BF9005D8343 /* EmployeeShiftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E295B5E208E7BF9005D8343 /* EmployeeShiftDetailViewController.swift */; };
 		6E295B63208E7CB8005D8343 /* EmployeeShiftDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E295B62208E7CB8005D8343 /* EmployeeShiftDetails.swift */; };
 		6E295B65208E82FB005D8343 /* EmployeeShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E295B64208E82FB005D8343 /* EmployeeShift.swift */; };
@@ -38,20 +36,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		0EA010CF208E761C004FC621 /* Workers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workers.swift; sourceTree = "<group>"; };
 		0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftViewController.swift; sourceTree = "<group>"; };
 		0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftDetailsViewController.swift; sourceTree = "<group>"; };
 		0EA010DF208E8772004FC621 /* ClientShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShift.swift; sourceTree = "<group>"; };
 		0EA010E1208E8AB4004FC621 /* ClientShiftDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftDetail.swift; sourceTree = "<group>"; };
 		0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientShiftTableViewCell.swift; sourceTree = "<group>"; };
-
 		6E295B5E208E7BF9005D8343 /* EmployeeShiftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeShiftDetailViewController.swift; sourceTree = "<group>"; };
 		6E295B62208E7CB8005D8343 /* EmployeeShiftDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeShiftDetails.swift; sourceTree = "<group>"; };
 		6E295B64208E82FB005D8343 /* EmployeeShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeShift.swift; sourceTree = "<group>"; };
 		6E295B66208E8A7E005D8343 /* EmployeeShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeShiftViewController.swift; sourceTree = "<group>"; };
 		6E295B68208EA2F3005D8343 /* EmployeeShiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeShiftTableViewCell.swift; sourceTree = "<group>"; };
-
 		913B5A2D207E99F4006DCBFD /* beontime_logo_225x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_225x225.png; sourceTree = "<group>"; };
 		913B5A2E207E99F4006DCBFD /* beontime_logo_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_32x32.png; sourceTree = "<group>"; };
 		913B5A2F207E99F4006DCBFD /* beontime_logo_639x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beontime_logo_639x165.png; sourceTree = "<group>"; };
@@ -68,7 +63,6 @@
 		913B5A46207EAA7B006DCBFD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		913B5A47207EAA7B006DCBFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		913B5A48207EAA7B006DCBFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = "../../Downloads/GoogleMaps-2.6.0/M4B/Frameworks/GoogleMapsM4B.framework"; sourceTree = "<group>"; };
 		914C67BC208AF013006078D6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		914C67BE208AF3A0006078D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		917327B520868BF4008E6CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +90,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EB04BF3208EB88600495051 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				917327B92086902E008E6CA7 /* ManagerViewController.swift */,
+				917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */,
+				0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */,
+				917327B520868BF4008E6CA7 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0EB04BF4208EB8AA00495051 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6E295B66208E8A7E005D8343 /* EmployeeShiftViewController.swift */,
+				6E295B5E208E7BF9005D8343 /* EmployeeShiftDetailViewController.swift */,
+				91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */,
+				0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		0EB04BF5208EB8DC00495051 /* CellViewController */ = {
+			isa = PBXGroup;
+			children = (
+				91FED8CA208D798200CE4718 /* EmployeeTableViewCell.swift */,
+				6E295B68208EA2F3005D8343 /* EmployeeShiftTableViewCell.swift */,
+				0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */,
+			);
+			path = CellViewController;
+			sourceTree = "<group>";
+		};
 		913B5A2C207E99F4006DCBFD /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +135,6 @@
 		913B5A3B207EAA7B006DCBFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				913B5A56207EAADF006DCBFD /* GoogleMapsM4B.framework */,
 				913B5A44207EAA7B006DCBFD /* Accelerate.framework */,
 				913B5A48207EAA7B006DCBFD /* CoreData.framework */,
 				913B5A3C207EAA7B006DCBFD /* CoreGraphics.framework */,
@@ -130,20 +155,14 @@
 		914C67BB208AEFE4006078D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-
 				0EA010CF208E761C004FC621 /* Workers.swift */,
-				914C67BC208AF013006078D6 /* Login.swift */,
-				914C67BE208AF3A0006078D6 /* User.swift */,
-				91FED886208D407400CE4718 /* Employee.swift */,
 				0EA010DF208E8772004FC621 /* ClientShift.swift */,
 				0EA010E1208E8AB4004FC621 /* ClientShiftDetail.swift */,
-
 				6E295B64208E82FB005D8343 /* EmployeeShift.swift */,
 				914C67BC208AF013006078D6 /* Login.swift */,
 				914C67BE208AF3A0006078D6 /* User.swift */,
 				91FED886208D407400CE4718 /* Employee.swift */,
 				6E295B62208E7CB8005D8343 /* EmployeeShiftDetails.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,24 +187,16 @@
 		91C01C85207CE19000162F42 /* BeOnTime-iOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				0EA010DB208E7F4C004FC621 /* ClientShiftViewController.swift */,
-				0EA010DD208E849F004FC621 /* ClientShiftDetailsViewController.swift */,
-				91FED88C208D6AA100CE4718 /* EmployeeListViewController.swift */,
+				0EB04BF5208EB8DC00495051 /* CellViewController */,
+				0EB04BF3208EB88600495051 /* ViewController */,
+				0EB04BF4208EB8AA00495051 /* TableViewController */,
 				914C67BB208AEFE4006078D6 /* Model */,
 				913B5A2C207E99F4006DCBFD /* images */,
 				91C01C86207CE19000162F42 /* AppDelegate.swift */,
 				91C01C8A207CE19000162F42 /* Main.storyboard */,
-				0EB04BF1208E968C00495051 /* ClientShiftTableViewCell.swift */,
-				91FED8CA208D798200CE4718 /* EmployeeTableViewCell.swift */,
 				91C01C8D207CE19000162F42 /* Assets.xcassets */,
 				91C01C8F207CE19000162F42 /* LaunchScreen.storyboard */,
 				91C01C92207CE19000162F42 /* Info.plist */,
-				917327B520868BF4008E6CA7 /* LoginViewController.swift */,
-				917327B720868FF5008E6CA7 /* EmloyeeViewController.swift */,
-				917327B92086902E008E6CA7 /* ManagerViewController.swift */,
-				6E295B5E208E7BF9005D8343 /* EmployeeShiftDetailViewController.swift */,
-				6E295B66208E8A7E005D8343 /* EmployeeShiftViewController.swift */,
-				6E295B68208EA2F3005D8343 /* EmployeeShiftTableViewCell.swift */,
 			);
 			path = "BeOnTime-iOSApp";
 			sourceTree = "<group>";
@@ -267,12 +278,9 @@
 			files = (
 				91FED887208D407400CE4718 /* Employee.swift in Sources */,
 				917327BA2086902E008E6CA7 /* ManagerViewController.swift in Sources */,
-
 				0EA010DC208E7F4C004FC621 /* ClientShiftViewController.swift in Sources */,
-
 				6E295B5F208E7BF9005D8343 /* EmployeeShiftDetailViewController.swift in Sources */,
 				6E295B65208E82FB005D8343 /* EmployeeShift.swift in Sources */,
-
 				917327B620868BF4008E6CA7 /* LoginViewController.swift in Sources */,
 				914C67BD208AF013006078D6 /* Login.swift in Sources */,
 				6E295B63208E7CB8005D8343 /* EmployeeShiftDetails.swift in Sources */,
