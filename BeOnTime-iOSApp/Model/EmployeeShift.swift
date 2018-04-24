@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class EmployeeShifts{
+class EmployeeShift{
     var shiftId:String?
     var companyName:String?
     var startDate:String?

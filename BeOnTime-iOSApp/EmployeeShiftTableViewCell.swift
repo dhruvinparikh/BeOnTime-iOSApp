@@ -11,7 +11,8 @@ import UIKit
 class EmployeeShiftTableViewCell: UITableViewCell {
 
     
-    @IBOutlet var lblCompanyName: UILabel!
+  
+    @IBOutlet weak var lblCompanyName: UILabel!
     @IBOutlet var lblStartDate: UILabel!
     @IBOutlet var lblEndDate: UILabel!
     

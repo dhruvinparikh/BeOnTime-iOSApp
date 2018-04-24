@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var BYETHOST_COOKIE_KEY = "8ed4a22cfbccd126df3bfe150e2bd14e";
+var BYETHOST_COOKIE_KEY = "e0425930eb12c3a457bd60eed3dd5126";
 class LoginViewController: UIViewController {
     
     //Object created for username text field on login

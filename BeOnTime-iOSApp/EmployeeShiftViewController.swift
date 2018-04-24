@@ -8,28 +8,30 @@
 
 import UIKit
 
-class EmployeeShiftViewController: UIViewController {
- var employeeShift = [EmployeeShifts]()
+class EmployeeShiftViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    var employeeShifts = [EmployeeShift]()
     
     @IBOutlet var employeeShiftView: UITableView!
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return self.employeeShift.count
+        return self.employeeShifts.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseEmployeeShiftCell", for: indexPath) as! EmployeeShiftTableViewCell
-        cell.lblCompanyName.text = employeeShift[indexPath.row].companyName! + " "
-        cell.lblStartDate.text = employeeShift[indexPath.row].startDate!
-        cell.lblEndDate.text = employeeShift[indexPath.row].endDate! + " "
+        cell.lblCompanyName.text = employeeShifts[indexPath.row].companyName!
+        cell.lblStartDate.text = employeeShifts[indexPath.row].startDate!
+        cell.lblEndDate.text = employeeShifts[indexPath.row].endDate!
+        print(employeeShifts[indexPath.row].shiftId)
         return cell
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        employeeShiftView.delegate=nil
-        employeeShiftView.dataSource=nil
+        self.employeeShiftView.delegate=nil
+        self.employeeShiftView.dataSource=nil
         // Do any additional setup after loading the view.
         
         //Reading preferences
@@ -120,9 +122,9 @@ class EmployeeShiftViewController: UIViewController {
                                 
                                 if(myDictionary["success"] as! Int == 1){
                                     
-                                   // print(myDictionary["shifts"] ?? 10002)
-                                
-                                    if let employeeShiftArray = myDictionary["employeeShift"]{
+                                    // print(myDictionary["shifts"] ?? 10002)
+                                    
+                                    if let employeeShiftArray = myDictionary["shifts"]{
                                         
                                         //print(employeeShiftArray)
                                         
@@ -132,21 +134,21 @@ class EmployeeShiftViewController: UIViewController {
                                             
                                             if let employeeshift = employeeShiftlist as? [String: Any]{
                                                 
-                                                print(employeeshift["shiftId"] ?? 10002)
+                                                //print(employeeshift["ShiftId"])
                                                 
-                                                let shift = EmployeeShifts()
+                                                let shift = EmployeeShift()
                                                 
-                                                shift.shiftId = employeeshift["shiftId"] as? String
+                                                shift.shiftId = employeeshift["ShiftId"] as? String
                                                 
-                                                shift.companyName = employeeshift["companyName"] as? String
+                                                shift.companyName = employeeshift["CompanyName"] as? String
                                                 
-                                                shift.startDate = employeeshift["startDate"] as? String
+                                                shift.startDate = employeeshift["ShiftStartTime"] as? String
                                                 
-                                                shift.endDate = employeeshift["endDate"] as? String
+                                                shift.endDate = employeeshift["ShiftEndTime"] as? String
                                                 
-                                               
                                                 
-                                                self.employeeShift.append(shift)
+                                                
+                                                self.employeeShifts.append(shift)
                                                 
                                             }
                                             
@@ -154,8 +156,8 @@ class EmployeeShiftViewController: UIViewController {
                                         
                                     }
                                     DispatchQueue.main.async {
-                                        self.employeeShiftView.dataSource = self as? UITableViewDataSource
-                                        self.employeeShiftView.delegate = self as? UITableViewDelegate
+                                        self.employeeShiftView.dataSource = self
+                                        self.employeeShiftView.delegate = self
                                         self.employeeShiftView.reloadData()
                                     } }
                                 
@@ -188,24 +190,24 @@ class EmployeeShiftViewController: UIViewController {
         
         
         dataTask.resume()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
